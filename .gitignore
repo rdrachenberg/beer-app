@@ -1,1 +1,3 @@
-beeryelp.code-workspace
+beer.code-workspace
+.DS_Store
+node_modules 

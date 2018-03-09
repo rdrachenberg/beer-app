@@ -1,2 +1,2 @@
-# couponBoss
-This is a coupon savings app
+# BeerApp
+This is a local brewery locator and beer app
