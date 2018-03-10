@@ -20,7 +20,7 @@ module.exports = function(sequelize, DataTypes) {
     Post.belongsTo(models.Author, {
       foreignKey: {
         allowNull: false,
-          incrementMe: { type: sequelize.INTEGER, autoIncrement: true }
+        
       }
     });
   };
