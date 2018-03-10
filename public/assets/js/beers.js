@@ -1,5 +1,5 @@
 <script type="text/javascript" src="assets/js"</script>
-<script type="text/javascript">
+
 $(document).ready(function(){
     // Check Radio-box
     $(".rating input:radio").attr("checked", false);
