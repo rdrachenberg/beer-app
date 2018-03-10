@@ -1,35 +1,34 @@
+var breweryDbApiKey = "27be3f3d0eb10fc0eec138e6cbb4b8f8";
+var userSearch = "tampa";
+var queryURL = "http://beermapping.com/webservice/locquery/" + breweryDbApiKey + "/" + userSearch + "&s=json";
+ 
+// Landing page onclick to take display differnt ROUTE to the ratings and out Home page
+$("#HOME BUTTON CLICK ID FORM TIM").on("click", function() {
 
-var breweryDbApiKey = a33c19bd014beef6a399d2811d6c62c3;
-
-// Query to return multiple location serches to display on Tims Beer HTML div
-var location = $('TIM FORM ID NAME FOR SEARCH).val();
-var queryURL = "http://beermapping.com/webservice/locquery/API_KEY/" + location + breweryDbApiKey;
-
-// Home Click to show Beer Interactions/Ratings HTML
-$("TIM ID FOR HOME BUTTON").on("click", function(){
-
-	// Run a code to display the Beer ratings/ Interactions HTML
-	
+  
 });
 
 
+// Search Button Click to then display the user search
+$("#SEARCH BUTTON CLICK ID FORM TIM").on("click", function() {
 
+    $.ajax({
+        url: queryURL,
+        method: "GET"
+      })
+      .done(function(response) {
+          
+        var results = response.data;
 
+        console.log(response);
+       
+        // for (var i = 0; i < results.length; i++) {
+        //     // test the return
+        //     console.log(results[i]);
 
-// Search button to HTML AJAX Call
-$("TIM ID FOR SEARCH BUTTON").on("click", function(){
-	$.ajax({
-  		url: queryURL,
-  		method: "GET"
-		}).done(function(response) {
-    		
-    		var results = response.data;
+        //     // display search items in appending to each other based on TIMS code
+        //     var resultsTitle = results[i].
+        // }
 
-    		for (var i = 0; i < results.length; i++) {
-      		
-      		// display the location to the html form tims code
-
-    		}
-  		});		
+      });
 });
-
