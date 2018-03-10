@@ -19,8 +19,10 @@ module.exports = function(sequelize, DataTypes) {
     Author.belongsTo(models.Beer, {
       foreignKey: {
         allowNull: false,
+
         // type: sequelize.INTEGER, autoIncrement: true 
       }
+
     });
     
   };
