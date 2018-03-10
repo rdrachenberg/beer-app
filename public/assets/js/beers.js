@@ -8,8 +8,8 @@ var queryURL = "http://beermapping.com/webservice/locquery/API_KEY/" + location 
 // Home Click to show Beer Interactions/Ratings HTML
 $("TIM ID FOR HOME BUTTON").on("click", function(){
 
-		// Run a code to display the Beer ratings/ Interactions HTML
-
+	// Run a code to display the Beer ratings/ Interactions HTML
+	
 });
 
 
