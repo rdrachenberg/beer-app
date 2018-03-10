@@ -1,1 +1,4 @@
-node_modules
+
+beer.code-workspace
+.DS_Store
+node_modules 
