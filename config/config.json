@@ -1,8 +1,8 @@
 {
   "development": {
       "username": "root",
-      "password": "Br@ndn3wm@n",
-      "database": "blogger",
+      "password": "",
+      "database": "beer_db",
       "host": "localhost",
       "dialect": "mysql"
     },
