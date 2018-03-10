@@ -1,0 +1,16 @@
+body{
+    background: url("../images/landingPageImage.jpg");
+    background-size: cover;
+}
+#getStartedDiv {
+    display: flex;
+     align-items: center;
+     justify-content: center;
+     height: 100vh;
+  }
+.charcoalBackground{
+      background: #373737;
+  }
+.goldColor{
+    color: #C0B283;
+}
