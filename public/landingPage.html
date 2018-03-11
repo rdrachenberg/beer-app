@@ -9,11 +9,20 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.0/css/mdb.min.css" rel="stylesheet">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash" rel="stylesheet">
+    
     <link rel="stylesheet" href="assets/css/style.css">
+
+    
 </head>
   <body>
         <nav class="navbar navbar-expand-lg charcoalBackground goldColor">
-                <a class="navbar-brand" href="#"><i class="fas fa-beer fa-3x goldColor"></i></a>
+                <a class="navbar-brand hoverable" href="#"><i class="fas fa-beer fa-3x goldColor"></i></a>
                 <button class="navbar-toggler charcoalBackground goldColor" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
                 </button>
@@ -21,28 +30,34 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                   <ul class="navbar-nav ml-auto goldColor">
                     <li class="nav-item">
-                      <a class="nav-link goldColor" href="#">About</a>
+                      <a class="nav-link goldColor hoverable" href="#">About</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link goldColor" href="#">Contact</a>
+                      <a class="nav-link goldColor hoverable" href="#">Contact</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link goldColor" href="#">Blog</a>
+                        <a class="nav-link goldColor hoverable" href="#">Blog</a>
                     </li>
                     
                     
                   </ul>
                   <form class="form-inline my-2 my-lg-0">
-                    <button class="btn btn-outline-goldColor my-2 my-sm-0 goldColor" type="submit">Join Now</button>
+                    <button class="btn btn-lg hoverable" type="submit">Sign In</button>
                   </form>
                 </div>
               </nav>
-      <main id = getStartedDiv>
+      <main >
+        <div class = "getStartedDiv">
+              <h1 >Share your Beer Experience</h1>
+             
         
-          <button type="button" class="btn link-outline btn-lg charcoalBackground goldColor">Get Started</button>
+              <h3>Don't waste your time with bad beer. We connect you with craft beer enthusiasts and let you rate your experience</h3>
+            
+       
+          <button type="submit" class = "btn btn-lg hoverable"><i class="fas fa-lock" id = "goldColor"></i>  Sign Up</button>
+        </div>
         
       </main>
-      
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
