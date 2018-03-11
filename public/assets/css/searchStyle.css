@@ -1,10 +1,11 @@
 body{
-    background: url("../images/beerGlasses.jpg");
+    /* background: url("../images/beerGlasses.jpg"); */
     background-size: cover;
     font-family: 'Berkshire Swash', cursive;
+    background: #F4F4F4;
 }
 .ratings {
-    margin-top: 12%;
+    /* margin-top: 12%; */
     background: #373737;
     box-shadow: 2px 2px 5px white;
     text-shadow: 2px 2px white;       
@@ -48,5 +49,10 @@ i{
     color: #C0B283;
 }
 input[type="text"]{
-    color:white;
+    color: #C0B283;
+    font-weight: bold;
 }
+.marginSpace{
+    margin-top: 5%;
+}
+
