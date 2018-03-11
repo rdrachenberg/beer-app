@@ -9,11 +9,20 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.0/css/mdb.min.css" rel="stylesheet">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash" rel="stylesheet">
+    
     <link rel="stylesheet" href="assets/css/style.css">
+
+    
 </head>
   <body>
         <nav class="navbar navbar-expand-lg charcoalBackground goldColor">
-                <a class="navbar-brand" href="#"><i class="fas fa-beer fa-3x goldColor"></i></a>
+                <a class="navbar-brand hoverable" href="#"><i class="fas fa-beer fa-3x goldColor"></i></a>
                 <button class="navbar-toggler charcoalBackground goldColor" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
                 </button>
@@ -21,33 +30,137 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                   <ul class="navbar-nav ml-auto goldColor">
                     <li class="nav-item">
-                      <a class="nav-link goldColor" href="#">About</a>
+                      <a class="nav-link goldColor hoverable" href="#">About</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link goldColor" href="#">Contact</a>
+                      <a class="nav-link goldColor hoverable" href="#">Contact</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link goldColor" href="#">Blog</a>
+                        <a class="nav-link goldColor hoverable" href="#">Blog</a>
                     </li>
                     
                     
                   </ul>
                   <form class="form-inline my-2 my-lg-0">
-                    <button class="btn btn-outline-goldColor my-2 my-sm-0 goldColor" type="submit">Join Now</button>
+                    <button class="btn btn-lg hoverable" type="button" data-toggle="modal" data-target="#signInModal">Sign In</button>
                   </form>
                 </div>
               </nav>
-      <main id = getStartedDiv>
+
+
+              
+      <main >
+        <div class = "getStartedDiv">
+              <h1 >Share your Beer Experience</h1>
+             
         
-          <button type="button" class="btn link-outline btn-lg charcoalBackground goldColor">Get Started</button>
+              <h3>Don't waste your time with bad beer. We connect you with craft beer enthusiasts and let you rate your experience</h3>
+            
+       
+          <button type = "button" class = "btn btn-lg hoverable" data-toggle="modal" data-target="#signUpModal"><i class="fas fa-lock" id = "goldColor"></i>  Sign Up</button>
+        </div>
+  
+  <!-- Sign Up Modal -->
+  <div class="modal fade" id="signUpModal" tabindex="-1" role="dialog" aria-labelledby="signUpModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <!-- Material form register -->
+<form>
+    <p class="h4 text-center mb-4">Sign up</p>
+
+    <!-- Material input text -->
+    <div class="md-form">
+        <i class="fa fa-user prefix grey-text"></i>
+        <input type="text" id="materialFormRegisterNameEx" class="form-control">
+        <label for="materialFormRegisterNameEx">Your name</label>
+    </div>
+
+    <!-- Material input email -->
+    <div class="md-form">
+        <i class="fa fa-envelope prefix grey-text"></i>
+        <input type="email" id="materialFormRegisterEmailEx" class="form-control">
+        <label for="materialFormRegisterEmailEx">Your email</label>
+    </div>
+
+    <!-- Material input email -->
+    <div class="md-form">
+        <i class="fa fa-exclamation-triangle prefix grey-text"></i>
+        <input type="email" id="materialFormRegisterConfirmEx" class="form-control">
+        <label for="materialFormRegisterConfirmEx">Confirm your email</label>
+    </div>
+
+    <!-- Material input password -->
+    <div class="md-form">
+        <i class="fa fa-lock prefix grey-text"></i>
+        <input type="password" id="materialFormRegisterPasswordEx" class="form-control">
+        <label for="materialFormRegisterPasswordEx">Your password</label>
+    </div>
+
+    <div class="text-center mt-4">
+        <button class="btn btn-primary" type="submit">Register</button>
+    </div>
+</form>
+<!-- Material form register -->
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Sign In Modal -->
+  <div class="modal fade" id="signInModal" tabindex="-1" role="dialog" aria-labelledby="signInModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <!-- Material form login -->
+<form>
+    <p class="h4 text-center mb-4">Sign in</p>
+
+    <!-- Material input email -->
+    <div class="md-form">
+        <i class="fa fa-envelope prefix grey-text"></i>
+        <input type="email" id="materialFormLoginEmailEx" class="form-control">
+        <label for="materialFormLoginEmailEx">Your email</label>
+    </div>
+
+    <!-- Material input password -->
+    <div class="md-form">
+        <i class="fa fa-lock prefix grey-text"></i>
+        <input type="password" id="materialFormLoginPasswordEx" class="form-control">
+        <label for="materialFormLoginPasswordEx">Your password</label>
+    </div>
+
+    <div class="text-center mt-4">
+        <button class="btn btn-default" type="submit">Login</button>
+    </div>
+</form>
+<!-- Material form login -->  
+        </div>
+      </div>
+    </div>
+  </div>
         
       </main>
-      
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script>
+  $('#myModal').on('shown.bs.modal', function () {
+  $('#myInput').trigger('focus')
+})
+  </script>
   </body>
 </html>
 
