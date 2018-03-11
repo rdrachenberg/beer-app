@@ -1,0 +1,58 @@
+body{
+    /* background: url("../images/beerGlasses.jpg"); */
+    background-size: cover;
+    font-family: 'Berkshire Swash', cursive;
+    background: #F4F4F4;
+}
+.ratings {
+    /* margin-top: 12%; */
+    background: #373737;
+    box-shadow: 2px 2px 5px white;
+    text-shadow: 2px 2px white;       
+  }
+.charcoalBackground{
+      background: #373737;
+  }
+.goldColor{
+    color: #C0B283;
+    text-shadow: .5px .5px white;
+}
+
+.btn-lg{
+    background: #C0B283;
+    text-shadow: 2px 2px #373737;
+    box-shadow: 2px 2px 5px white;
+}
+a:hover{
+    color: white;
+}
+
+
+#signUpForm{
+    background: rgb(228, 225, 217);
+    /* opacity: .5; */
+    font-weight: bold;
+}
+
+input::-webkit-input-placeholder{
+    color: #C0B283 !important;
+    text-shadow: .5px .5px white;    
+}
+input:-moz-placeholder {
+    color:red;
+}
+textarea::-webkit-input-placeholder{
+    color: #C0B283 !important;
+    text-shadow: .5px .5px white;    
+}
+i{
+    color: #C0B283;
+}
+input[type="text"]{
+    color: #C0B283;
+    font-weight: bold;
+}
+.marginSpace{
+    margin-top: 5%;
+}
+

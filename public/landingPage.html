@@ -9,72 +9,162 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Bungee+Inline|Luckiest+Guy" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
-</head>
-<script id="entry-template" type="text/x-handlebars-template">
-  <div class="entry">
-    <h1>{{title}}</h1>
-    <div class="body">
-      {{body}}
-    </div>
-  </div>
-</script>
 
-<body>
-  <nav class="navbar navbar-default" role="navigation">
-      <img class="logo" src="assets/images/foamy-mug-of-beer.png"></a>
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.0/css/mdb.min.css" rel="stylesheet">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash" rel="stylesheet">
     
-  </nav>
-    <div class="site-wrapper">
-        <img src="assets/images/beer-on-wall.jpg" alt="Beer Wall">
-  <div class="site-wrapper-inner">
+    <link rel="stylesheet" href="assets/css/style.css">
 
-    <div class="cover-container">
-      <div class="masthead clearfix">
-        <div class="inner">
-          <h3 class="masthead-brand">Beer</h3>
-          <nav>
-            <ul class="nav masthead-nav">
-              <li class="active"><a href="#"><h3>ABOUT</h3></a></li>
-              <li><a href="#"><h3>Join</h3></a></li>
-            </ul>
-          </nav>
+    
+</head>
+  <body>
+        <nav class="navbar navbar-expand-lg charcoalBackground goldColor">
+                <a class="navbar-brand hoverable" href="#"><i class="fas fa-beer fa-3x goldColor"></i></a>
+                <button class="navbar-toggler charcoalBackground goldColor" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+              
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav ml-auto goldColor">
+                    <li class="nav-item">
+                      <a class="nav-link goldColor hoverable" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link goldColor hoverable" href="#">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link goldColor hoverable" href="#">Blog</a>
+                    </li>
+                    
+                    
+                  </ul>
+                  <form class="form-inline my-2 my-lg-0">
+                    <button class="btn btn-lg hoverable" type="button" data-toggle="modal" data-target="#signInModal">Sign In</button>
+                  </form>
+                </div>
+              </nav>
+
+
+              
+      <main >
+        <div class = "getStartedDiv">
+          <img src= "assets/images/beer-in-bucket.jpg" class="getStartedDiv">
+          <div class="getStartedText">
+              <h1 >Share your Beer Experience</h1>
+             
+        
+              <h3>Don't waste your time with bad beer. We connect you with craft beer enthusiasts and let you rate your experience</h3>
+            
+       
+          <button type = "button" class = "btn btn-lg hoverable" data-toggle="modal" data-target="#signUpModal"><i class="fas fa-lock"></i>  Sign Up</button>
         </div>
-      </div>
-      <div class ="col-xs-12 col-sm-offset-1 col-sm-10 col-md-offset-1 col-md-10 body">
-      <div class="inner cover">
-        <h1 class="cover-heading">Beer Aficionado</h1>
-        <p class="lead"><h2>Your One Stop To Finding Great Brewery's locally in your area!</h2></p>
-        <p class="lead">
-          <a href="#" class="btn btn-lg btn-default"></a></p><h1><a href="#" class="btn btn-lg btn-default"><h1>GET STARTED</h1></a>
-        <p></p>
-      </div>
-      </div>
-
-      <div class="mastfoot">
-        <div class="inner">
-          <p>UCF<a href="http://getbootstrap.com">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
         </div>
-      </div>
+  
+  <!-- Sign Up Modal -->
+  <div class="modal fade" id="signUpModal" tabindex="-1" role="dialog" aria-labelledby="signUpModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <!-- Material form register -->
+<form>
+    <p class="h4 text-center mb-4">Sign up</p>
 
+    <!-- Material input text -->
+    <div class="md-form">
+        <i class="fa fa-user prefix grey-text"></i>
+        <input type="text" id="materialFormRegisterNameEx" class="form-control" placeholder="Your Name">
+        <label for="materialFormRegisterNameEx"></label>
     </div>
 
+    <!-- Material input email -->
+    <div class="md-form">
+        <i class="fa fa-envelope prefix grey-text"></i>
+        <input type="email" id="materialFormRegisterEmailEx" class="form-control" placeholder="Your Email">
+        <label for="materialFormRegisterEmailEx"></label>
+    </div>
+
+    <!-- Material input email -->
+    <div class="md-form">
+        <i class="fa fa-exclamation-triangle prefix grey-text"></i>
+        <input type="email" id="materialFormRegisterConfirmEx" class="form-control" placeholder="Confirm Your Email">
+        <label for="materialFormRegisterConfirmEx"></label>
+    </div>
+
+    <!-- Material input password -->
+    <div class="md-form">
+        <i class="fa fa-lock prefix grey-text"></i>
+        <input type="password" id="materialFormRegisterPasswordEx" class="form-control" placeholder="Your Password">
+        <label for="materialFormRegisterPasswordEx"></label>
+    </div>
+
+    <div class="text-center mt-4">
+        <button class="btn btn-primary" type="submit">Register</button>
+    </div>
+</form>
+<!-- Material form register -->
+        </div>
+      </div>
+    </div>
   </div>
-
-</div>
   
-  
+  <!-- Sign In Modal -->
+  <div class="modal fade" id="signInModal" tabindex="-1" role="dialog" aria-labelledby="signInModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <!-- Material form login -->
+<form>
+    <p class="h4 text-center mb-4">Sign in</p>
 
+    <!-- Material input email -->
+    <div class="md-form">
+        <i class="fa fa-envelope prefix grey-text"></i>
+        <input type="email" id="materialFormLoginEmailEx" class="form-control" placeholder="Your Email">
+        <label for="materialFormLoginEmailEx"></label>
+    </div>
+
+    <!-- Material input password -->
+    <div class="md-form">
+        <i class="fa fa-lock prefix grey-text"></i>
+        <input mdbactive type="password" id="materialFormLoginPasswordEx" class="form-control" placeholder="Your Password">
+        <label for="materialFormLoginPasswordEx"></label>
+    </div>
+
+    <div class="text-center mt-4">
+        <button class="btn btn-default" type="submit">Login</button>
+    </div>
+</form>
+<!-- Material form login -->  
+        </div>
+      </div>
+    </div>
+  </div>
+        
+      </main>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
-</body>
+  <script>
+  $('#myModal').on('shown.bs.modal', function () {
+  $('#myInput').trigger('focus')
+})
+  </script>
+  </body>
 </html>
 
 <!-- var breweryDbApiKey = a33c19bd014beef6a399d2811d6c62c3; -->
