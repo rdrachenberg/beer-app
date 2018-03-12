@@ -48,11 +48,7 @@ a:hover{
 }
 
 
-#signUpForm{
-    background: rgb(228, 225, 217);
-    /* opacity: .5; */
-    font-weight: bold;
-}
+
 
 form{
   background: url("../images/signuptoast.jpg");
