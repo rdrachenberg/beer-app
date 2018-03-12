@@ -1,13 +1,9 @@
-body{
-    background: url("../images/landingPageImage.jpg");
-    background-size: cover;
-    font-family: 'Berkshire Swash', cursive;
-}
-.getStartedDiv {
+
+.getStartedText{
     width: 50%;
     height: 50%;
-    color: white;
-    text-shadow: 4px 4px #373737;
+    color: rgb(246, 250, 26);
+    text-shadow: 4px 4px #0d6669;
 
     position: absolute;
     top:40%;
@@ -18,6 +14,16 @@ body{
         margin: auto;
     text-align: center;
   }
+
+  body{
+    font-family: "brandon-grotesque",sans-serif;
+}
+.getStartedDiv {
+    height:100%;
+    width:100%;
+    margin:auto;
+  }
+  
 .charcoalBackground{
       background: #373737;
   }
@@ -31,11 +37,25 @@ body{
     text-shadow: 2px 2px #373737;
     box-shadow: 2px 2px 5px white;
 }
+
+
+.btn:hover{
+  color:#fff;
+  border:solid #fff 3px;
+}
 a:hover{
     color: white;
 }
 
 
 
+
+form{
+  background: url("../images/signuptoast.jpg");
+  height:100%;
+  width:100%;
+  margin:auto;
+  background-size:cover;
+}
 
 

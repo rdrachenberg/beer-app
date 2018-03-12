@@ -2,7 +2,7 @@
 var breweryDbApiKey = a33c19bd014beef6a399d2811d6c62c3;
 
 // Query to return multiple location serches to display on Tims Beer HTML div
-var location = $('TIM FORM ID NAME FOR SEARCH).val();
+var location = $('TIM FORM ID NAME FOR SEARCH').val();
 var queryURL = "http://beermapping.com/webservice/locquery/API_KEY/" + location + breweryDbApiKey;
 
 // Home Click to show Beer Interactions/Ratings HTML
