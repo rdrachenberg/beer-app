@@ -2,11 +2,12 @@
 <html>
 <head>
   <meta charset = "UTF-8">
-  <title>Rate Your Beer Find</title>
+  <title>Search Beer Locations</title>
   <!--Bootstrap link-->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
   <!--jQuery link-->
-  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+
   <!--Bootstrap JavaScript link-->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
   <!--Font Awesome-->
@@ -15,248 +16,57 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.css">
   <!--Cloud Fare jQuery-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
+  <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
 </head>
-<body>
-    <div class="txt-center">
-        <form>
-            <div class="rating">
-                <input id="star5" name="star" type="radio" value="5" class="radio-btn hide" />
-                <label for="star5">☆</label>
-                <input id="star4" name="star" type="radio" value="4" class="radio-btn hide" />
-                <label for="star4">☆</label>
-                <input id="star3" name="star" type="radio" value="3" class="radio-btn hide" />
-                <label for="star3">☆</label>
-                <input id="star2" name="star" type="radio" value="2" class="radio-btn hide" />
-                <label for="star2">☆</label>
-                <input id="star1" name="star" type="radio" value="1" class="radio-btn hide" />
-                <label for="star1">☆</label>
-                <div class="clear"></div>
-            </div>
-        </form>
-    </div>
-        <div class="rating">
-                <span><input type="radio" name="rating" id="str5" value="5"><label for="str5"></label></span>
-                <span><input type="radio" name="rating" id="str4" value="4"><label for="str4"></label></span>
-                <span><input type="radio" name="rating" id="str3" value="3"><label for="str3"></label></span>
-                <span><input type="radio" name="rating" id="str2" value="2"><label for="str2"></label></span>
-                <span><input type="radio" name="rating" id="str1" value="1"><label for="str1"></label></span>
-            </div>
 
-<div class="container">
-<h2>Questions</h2>
-<hr>
-<h3><strong>About You</strong></h3>
-<h4>Name (Required)</h4>
-<input type="text" name id="name" class="form-control" required>
-<h4>Link to Photo (Required)</h4>
-<input type="text" name id="photo" class="form-control" required>
-<hr>
+<body onload="getbeerresults();">
+  <script>
+    function getbeerresults(){
+      $(document).ready(function() {
+      $('#example').DataTable( {
+          "ajax": 'http://beermapping.com/webservice/loccity/432324ca571e07062425721c17879e2e/new%20york%2cNY'
+        });
+      });
+    };  
+  
+  </script>
+    <form action="https://beermapping.com/search/" method="GET">
+      <input type="hidden" name="source" value="nav">
+      <input id="navsearch" type="text" size="24" placeholder="city/state" name="q"> 
+      <input class="btn-submit" type="submit" value="go">
+    </form>
 
-<h3><strong>Question 1</strong></h3>
-<h4>You are late to work all the time.</h4>
-<select class="form-control" id="q1">
-  <option value></option>
-  <option value="1">1 (Strongly Disagree)</option>
-  <option value="2">2</option>
-  <option value="3">3</option>
-  <option value="4">4</option>
-  <option value="5">5 (Strongly Agree)</option>
-</select>
+    <table class="table table-striped table-bordered table-condensed table-hover display" id="example">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Address</th>
+                <th>Phone</th>
+            </tr>
+        </thead>
+      <!--this is header row one
+        <tr>
+          <th>Name</th>
+          <th>Address</th>
+          <th>Phone</th>
+        </tr>
+        <!--this is table row one--
+        <tr>
+          <td>Heartland Brewery Union Square</td>
+          <td>35 Union Square West</td>
+          <td>(212)645-3400</td>
+        </tr>
+        <!--this is table row two- 
+        <tr>
+          <td>February</td>
+          <td>$80</td>
+          <td>$80</td>
+          
+        </tr>-->
+      </table>
 
-<h3><strong>Question 2</strong></h3>
-<h4>You would rather talk on the phone rather than text.</h4>
-<select class="form-control" id="q2">
-  <option value></option>
-  <option value="1">1 (Strongly Disagree)</option>
-  <option value="2">2</option>
-  <option value="3">3</option>
-  <option value="4">4</option>
-  <option value="5">5 (Strongly Agree)</option>
-</select>
 
-<h3><strong>Question 3</strong></h3>
-<h4>You play video games often.</h4>
-<select class="form-control" id="q3">
-  <option value></option>
-  <option value="1">1 (Strongly Disagree)</option>
-  <option value="2">2</option>
-  <option value="3">3</option>
-  <option value="4">4</option>
-  <option value="5">5 (Strongly Agree)</option>
-</select>
-
-<h3><strong>Question 4</strong></h3>
-<h4>You are hands on all the time.</h4>
-<select class="form-control" id="q4">
-  <option value></option>
-  <option value="1">1 (Strongly Disagree)</option>
-  <option value="2">2</option>
-  <option value="3">3</option>
-  <option value="4">4</option>
-  <option value="5">5 (Strongly Agree)</option>
-</select>
-
-<h3><strong>Question 5</strong></h3>
-<h4>You like to workout daily.</h4>
-<select class="form-control" id="q5">
-  <option value></option>
-  <option value="1">1 (Strongly Disagree)</option>
-  <option value="2">2</option>
-  <option value="3">3</option>
-  <option value="4">4</option>
-  <option value="5">5 (Strongly Agree)</option>
-</select>
-
-<h3><strong>Question 6</strong></h3>
-<h4>You love being around people.</h4>
-<select class="form-control" id="q6">
-  <option value></option>
-  <option value="1">1 (Strongly Disagree)</option>
-  <option value="2">2</option>
-  <option value="3">3</option>
-  <option value="4">4</option>
-  <option value="5">5 (Strongly Agree)</option>
-</select>
-
-<h3><strong>Question 7</strong></h3>
-<h4>You like worldstarr better than facebook or other social media sites.</h4>
-<select class="form-control" id="q7">
-  <option value></option>
-  <option value="1">1 (Strongly Disagree)</option>
-  <option value="2">2</option>
-  <option value="3">3</option>
-  <option value="4">4</option>
-  <option value="5">5 (Strongly Agree)</option>
-</select>
-
-<h3><strong>Question 8</strong></h3>
-<h4>You love your pets more than yourself.</h4>
-<select class="form-control" id="q8">
-  <option value></option>
-  <option value="1">1 (Strongly Disagree)</option>
-  <option value="2">2</option>
-  <option value="3">3</option>
-  <option value="4">4</option>
-  <option value="5">5 (Strongly Agree)</option>
-</select>
-
-<h3><strong>Question 9</strong></h3>
-<h4>You are a critcal thinker.</h4>
-<select class="form-control" id="q9">
-  <option value></option>
-  <option value="1">1 (Strongly Disagree)</option>
-  <option value="2">2</option>
-  <option value="3">3</option>
-  <option value="4">4</option>
-  <option value="5">5 (Strongly Agree)</option>
-</select>
-
-<h3><strong>Question 10</strong></h3>
-<h4>You like to travel around the world!</h4>
-<select class="form-control" id="q10">
-  <option value></option>
-  <option value="1">1 (Strongly Disagree)</option>
-  <option value="2">2</option>
-  <option value="3">3</option>
-  <option value="4">4</option>
-  <option value="5">5 (Strongly Agree)</option>
-</select>
-
-<br>
-<br>
-<button type="submit" class="btn btn-primary btn-lg btn-block" id="submit">
-  <i class="fa fa-check-circle" aria-hidden="true">
-  </i>Submit</button>
-<br>
-
-<footer class="footer">
-  <div class="container">
-    
-    <p><a href="/api/friends">API Friends List</a>
-     | <a href ="https://github.com/tsanders1114/friendfinder">GitHub Repo</a></p>
-
-    </div>
-    </footer>
-    
-  </div>
-
-<!--Modal-->
-<div id="resultsModal" class="modal fade" role="dialog">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">x</button>
-        <h2 class="modal-title"><strong>Your Lost Long Friend!</strong></h2>
-      </div>
-      <div class="modal-body">
-        <h2 id="matchName"></h2>
-        <img id="matchImg" src="" alt="">
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Nice!</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<script type="text/javascript">
-
-var config ={
-  ".chosen-select":{},
-  ".chosen-select-deselect":{allow_single_deselect: true},
-  ".chosen-select-no-single":{disable_search_threshold: 10},
-  ".chosen-select-no-results":{no_results_text:"Nothing Found Here!"},
-  ".chosen-select-width":{width:"95%"},
-
-};
-for (var selector in config){
-  $(selector).chosen(config[selector]);
-}
-$("#submit").on("click", function(){
-  function validateForm(){
-    var isValid = true;
-    $(".form-control").each(function(){
-      if($(this).val()===""){
-        isValid = false;
-      }
-    });
-    $(".chosen-select").each(function(){
-      if($(this).val()=== ""){
-        isValid = false;
-      }
-    });
-    return isValid;
-  }
-  if(validateForm()){
-    var friendData = {
-      name:$("#name").val(),
-      photo:$("#photo").val(),
-      scores:[
-        $("#q1").val(),
-        $("#q2").val(),
-        $("#q3").val(),
-        $("#q4").val(),
-        $("#q5").val(),
-        $("#q6").val(),
-        $("#q7").val(),
-        $("#q8").val(),
-        $("#q9").val(),
-        $("#q10").val(),
-        
-      ]
-    };
-    var currentUrl = window.location.origin;
-    $.post(currentUrl + "/api/friends", friendData, function(data){
-      $("#resultsModal").modal("toggle");
-      //alert("working");
-    });
-  }
-  else{
-    alert("Make sure to fill out all fields before submitting!");
-  }
-  return false;
-});
-</script>
 
 </body>
 </html>

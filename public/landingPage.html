@@ -74,40 +74,41 @@
         </div>
         <div class="modal-body">
           <!-- Material form register -->
-<form>
+<form data-toggle="validator" role="form">
     <p class="h4 text-center mb-4">Sign up</p>
 
     <!-- Material input text -->
-    <div class="md-form">
+    <div class="form-group md-form">
         <i class="fa fa-user prefix grey-text"></i>
-        <input type="text" id="materialFormRegisterNameEx" class="form-control" placeholder="Your Name">
+        <input type="text" id="materialFormRegisterNameEx" class="form-control" placeholder="Name" required>
         <label for="materialFormRegisterNameEx"></label>
     </div>
 
     <!-- Material input email -->
-    <div class="md-form">
+    <div class="form-group md-form">
         <i class="fa fa-envelope prefix grey-text"></i>
-        <input type="email" id="materialFormRegisterEmailEx" class="form-control" placeholder="Your Email">
+        <input type="email" id="materialFormRegisterEmailEx" class="form-control" placeholder="Email" required>
         <label for="materialFormRegisterEmailEx"></label>
     </div>
 
-    <!-- Material input email -->
-    <div class="md-form">
-        <i class="fa fa-exclamation-triangle prefix grey-text"></i>
-        <input type="email" id="materialFormRegisterConfirmEx" class="form-control" placeholder="Confirm Your Email">
-        <label for="materialFormRegisterConfirmEx"></label>
-    </div>
-
     <!-- Material input password -->
-    <div class="md-form">
-        <i class="fa fa-lock prefix grey-text"></i>
-        <input type="password" id="materialFormRegisterPasswordEx" class="form-control" placeholder="Your Password">
+    <div class="form-group md-form">
+        <i class="fa fa-exclamation-triangle prefix grey-text"></i>
+        <input type="password" id="materialFormRegisterPasswordEx" class="form-control" placeholder="Password" required>
         <label for="materialFormRegisterPasswordEx"></label>
     </div>
 
-    <div class="text-center mt-4">
-        <button class="btn btn-primary" type="submit">Register</button>
+    <!-- Material input confirmation password -->
+    <div class="form-group md-form">
+        <i class="fa fa-lock prefix grey-text"></i>
+        <input type="password" id="materialFormRegisterConfirmEx" class="form-control" placeholder="Confirm Password" data-match="#materialFormRegisterPasswordEx" data-match-error="Sorry passwords do not match please try again" required>
+        <label for="materialFormRegisterConfirmEx"></label>
     </div>
+    <div class="help-block with-errors"></div>
+      <div class="form-group text-center mt-4">
+          <button class="btn btn-primary" type="submit">Register</button>
+    </div>
+    
 </form>
 <!-- Material form register -->
         </div>
