@@ -71,39 +71,39 @@
         </div>
         <div class="modal-body">
           <!-- Material form register -->
-<form>
+<form id = "signUpForm">
     <p class="h4 text-center mb-4">Sign up</p>
 
     <!-- Material input text -->
     <div class="md-form">
         <i class="fa fa-user prefix grey-text"></i>
-        <input type="text" id="materialFormRegisterNameEx" class="form-control" placeholder="Your Name">
-        <label for="materialFormRegisterNameEx"></label>
+        <input type="text" id="formName" class="form-control" placeholder="Your Name" autocomplete="name">
+        <label for="formName"></label>
     </div>
 
     <!-- Material input email -->
     <div class="md-form">
         <i class="fa fa-envelope prefix grey-text"></i>
-        <input type="email" id="materialFormRegisterEmailEx" class="form-control" placeholder="Your Email">
-        <label for="materialFormRegisterEmailEx"></label>
+        <input type="email" id="formEmail" class="form-control" placeholder="Your Email" autocomplete="email">
+        <label for="formEmail"></label>
     </div>
 
     <!-- Material input email -->
     <div class="md-form">
         <i class="fa fa-exclamation-triangle prefix grey-text"></i>
-        <input type="email" id="materialFormRegisterConfirmEx" class="form-control" placeholder="Confirm Your Email">
-        <label for="materialFormRegisterConfirmEx"></label>
+        <input type="email" id="formConfirmEmail" class="form-control" placeholder="Confirm Your Email" autocomplete="confirm">
+        <label for="formConfirmEmail"></label>
     </div>
 
     <!-- Material input password -->
     <div class="md-form">
         <i class="fa fa-lock prefix grey-text"></i>
-        <input type="password" id="materialFormRegisterPasswordEx" class="form-control" placeholder="Your Password">
-        <label for="materialFormRegisterPasswordEx"></label>
+        <input type="password" id="formPassword" class="form-control" placeholder="Your Password" autocomplete="password">
+        <label for="formPassword"></label>
     </div>
 
     <div class="text-center mt-4">
-        <button class="btn btn-primary" type="submit">Register</button>
+        <button class="btn btn-primary" type="submit" id = "registerButton">Register</button>
     </div>
 </form>
 <!-- Material form register -->
@@ -123,25 +123,25 @@
         </div>
         <div class="modal-body">
           <!-- Material form login -->
-<form>
+<form id = "signInForm">
     <p class="h4 text-center mb-4">Sign in</p>
 
     <!-- Material input email -->
     <div class="md-form">
         <i class="fa fa-envelope prefix grey-text"></i>
-        <input type="email" id="materialFormLoginEmailEx" class="form-control" placeholder="Your Email">
-        <label for="materialFormLoginEmailEx"></label>
+        <input type="email" id="loginEmail" class="form-control" placeholder="Your Email">
+        <label for="loginEmail"></label>
     </div>
 
     <!-- Material input password -->
     <div class="md-form">
         <i class="fa fa-lock prefix grey-text"></i>
-        <input mdbactive type="password" id="materialFormLoginPasswordEx" class="form-control" placeholder="Your Password">
-        <label for="materialFormLoginPasswordEx"></label>
+        <input mdbactive type="password" id="loginPassword" class="form-control" placeholder="Your Password">
+        <label for="loginPassword"></label>
     </div>
 
     <div class="text-center mt-4">
-        <button class="btn btn-default" type="submit">Login</button>
+        <button class="btn btn-default" type="submit" id = "loginButton">Login</button>
     </div>
 </form>
 <!-- Material form login -->  
@@ -156,6 +156,7 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="assets/js/landingPage.js"></script>
   <script>
   $('#myModal').on('shown.bs.modal', function () {
   $('#myInput').trigger('focus')
