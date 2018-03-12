@@ -29,5 +29,7 @@
     "npm": "^5.7.1",
     "sequelize": "^4.35.5"
   },
-  "devDependencies": {}
+  "devDependencies":{
+  }
+}
 
