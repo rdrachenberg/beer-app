@@ -2,8 +2,8 @@
 .getStartedText{
     width: 50%;
     height: 50%;
-    color: white;
-    text-shadow: 4px 4px #070201;
+    color: rgb(246, 250, 26);
+    text-shadow: 4px 4px #0d6669;
 
     position: absolute;
     top:40%;
@@ -22,9 +22,6 @@
     height:100%;
     width:100%;
     margin:auto;
-    background: url("../images/beer-in-bucket.jpg");
-    background-size: cover;
-    opacity: 0.5;
   }
   
 .charcoalBackground{
