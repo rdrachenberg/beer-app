@@ -134,21 +134,21 @@ p,#toptext{
     margin-bottom: 50px;
 }
 
-#randomBeers,d-block w-100{
+.d-block, .w-100{
     display: table-cell;
-  vertical-align: middle;
-  width: 100%;
-  max-width: none;
+    vertical-align: middle;
+    width: 100%;
+    max-width: none;
+    float:center;
+ 
 
 }
 
 .carousel-inner{
     width:800px;
     height:500px;
-    align: center;
+    align-self: center;
 }
 
-.align{
-    align:center;
-}
+
 
