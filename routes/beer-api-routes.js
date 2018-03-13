@@ -5,10 +5,10 @@ module.exports = function(app) {
     // Here we add an "include" property to our options in our findAll query
     // We set the value to an array of the models we want to include in a left outer join
     // In this case, just db.Post
-    db.Author.findAll({
+    db.User.findAll({
       include: [db.Post],
-    }).then(function(dbAuthor) {
-      res.json(dbAuthor);
+    }).then(function(dbUser) {
+      res.json(dbUser);
     });
   });
 
@@ -16,29 +16,29 @@ module.exports = function(app) {
     // Here we add an "include" property to our options in our findOne query
     // We set the value to an array of the models we want to include in a left outer join
     // In this case, just db.Post
-    db.Author.findOne({
+    db.User.findOne({
       where: {
         id: req.params.id
       },
       include: [db.Post]
-    }).then(function(dbAuthor) {
-      res.json(dbAuthor);
+    }).then(function(dbUser) {
+      res.json(dbUser);
     });
   });
 
   app.post("/api/beer", function(req, res) {
-    db.Author.create(req.body).then(function(dbAuthor) {
-      res.json(dbAuthor);
+    db.User.create(req.body).then(function(dbUser) {
+      res.json(dbUser);
     });
   });
 
   app.delete("/api/beer/:id", function(req, res) {
-    db.Author.destroy({
+    db.User.destroy({
       where: {
         id: req.params.id
       }
-    }).then(function(dbAuthor) {
-      res.json(dbAuthor);
+    }).then(function(dbUser) {
+      res.json(dbUser);
     });
   });
 

@@ -16,9 +16,6 @@ module.exports = function (sequelize, DataTypes) {
         Beer.hasMany(models.Post, {
             onDelete: "cascade"
         });
-        Beer.hasMany(models.Author, {
-            onDelete: "cascade"
-        });
     };
 
     return Beer;
