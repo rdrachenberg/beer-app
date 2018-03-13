@@ -23,8 +23,8 @@ module.exports = function(app) {
     // In this case, just db.User
     db.Post.findAll({
       where: query,
-      include: [db.User],
-      include: [db.Beer]
+      include: [db.User]
+      // include: [db.Beer]
     }).then(function(dbPost) {
       res.json(dbPost);
     });

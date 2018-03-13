@@ -20,6 +20,11 @@ module.exports = function(sequelize, DataTypes) {
     Post.belongsTo(models.User, {
       foreignKey: 'owner_id' 
     });
+    // Post.hasMany(models.User); 
+    // Post.belongsToMany(models.Beer, {
+    //   through: "User",
+    //   foreignKey: 'owner_id'
+    // })
   };
 
   return Post;
