@@ -15,26 +15,28 @@ $('#registerButton').click(function(){
 
     usersArr.unshift(user);
     console.log(usersArr)
-
+    $.post('/api/user', user);
     document.getElementById("signUpForm").reset();
 });
 
-$('#loginButton').click(function(){
+$('#loginButton').on("click", function(event){
     event.preventDefault();
+    var loginName = $('#loginName').val().trim();
     var loginUserEmail = $('#loginEmail').val().trim();
     var loginUserPassword = $('#loginPassword').val().trim();
 
-    var currentUser = {
-        'userEmail' : loginUserEmail,
-        'userPassword' : loginUserPassword
+    var newUser = {
+        'name' : loginName,
+        'email' : loginUserEmail,
+        'password' : loginUserPassword
     }
 
-    console.table(currentUser);
-
-    console.log(loginUserEmail);
-    console.log(loginUserPassword);
+    $.post('/api/user', newUser), function(data){
+        console.log(data);
+    };
+    
+    $.get('/search');
+    
 
     document.getElementById('signInForm').reset();
 });
-
- 
