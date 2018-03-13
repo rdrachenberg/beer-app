@@ -1,4 +1,4 @@
-
+//google maps API code
 function initAutocomplete() {
     var map = new google.maps.Map(document.getElementById('map'), {
       center: {lat: -33.8688, lng: 151.2195},
@@ -64,8 +64,12 @@ function initAutocomplete() {
       });
       map.fitBounds(bounds);
     });
-  }
-  $(function() {
+  } //end of google maps funtion
+  
+  
+  $(function() { //document ready
+
+    
   
 $('#ratingSubmitButton').on("click", function(event){
     event.preventDefault();
@@ -83,21 +87,15 @@ $('#ratingSubmitButton').on("click", function(event){
         'Comment':userCommentRating
     }
 
-   $.post("/api/authors", comment);
-   
+    $.post('/api/posts', comment), function(data){
+        console.log(data);
+    };
+
     
     document.getElementById('ratingsForm').reset();
 });
 
-// Function for retrieving authors and getting them ready to be rendered to the page
-// function getComments() {
-//     $.get("/api/authors", function(data) {
-//      console.log(data);
-//       }
-//     )};
 
-    // function postComments(commentData){
-    //     $.post("/api/authors", comment)
-    // .then(getComments);
-    // }
+
 });
+

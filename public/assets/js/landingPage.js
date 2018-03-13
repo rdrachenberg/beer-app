@@ -35,7 +35,7 @@ $('#loginButton').on("click", function(event){
         console.log(data);
     };
     
-    $.get('/search');
+    // $.get('/search');
     
 
     document.getElementById('signInForm').reset();

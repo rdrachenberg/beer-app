@@ -70,9 +70,14 @@ module.exports = function(app) {
   // POST route for saving a new post
   app.post("/api/user", function(req, res) {
     db.User.create(req.body).then(function(dbUser) {
-      res.json(dbUser);
+     // res.json(dbUser);
+     console.log("Hi");
     });
+    res.redirect("/search");
+   
   });
+
+  
 
   // DELETE route for deleting posts
   app.delete("/api/posts/:id", function(req, res) {
