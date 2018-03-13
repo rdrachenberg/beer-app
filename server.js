@@ -5,6 +5,11 @@ var bodyParser = require("body-parser");
 var session = require("express-session");
 // Requiring passport as we've configured it
 var passport = require("./config/passport");
+var methodOverride = require('method-override')
+
+var BreweryDb = require('brewerydb-node');
+var brewdb = new BreweryDb('a33c19bd014beef6a399d2811d6c62c3');
+
 
 // Sets up the Express App
 // =============================================================
@@ -17,9 +22,17 @@ var db = require("./models");
 // Sets up the Express app to handle data parsing
 
 // parse application/x-www-form-urlencoded
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
 // parse application/json
 app.use(bodyParser.json());
+
+app.use(methodOverride('_method'))
+
+// Set Handlebars.
+var exphbs = require("express-handlebars");
+
+app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+app.set("view engine", "handlebars");
 
 // Static directory
 app.use(express.static("public"));

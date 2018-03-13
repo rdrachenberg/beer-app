@@ -1,0 +1,64 @@
+{{!-- Setup the index.handlebars to have the template that Handlebars can render onto. --}}
+
+{{!-- Create a button in index.handlebars that will submit the user input into the database. --}}
+<h1 class = "center-align">User Comments!</h1>
+
+<main>
+    {{!-- Container --}}
+    <div class = "container">
+        {{!-- Row --}}
+        <div class = "row">
+            {{!-- Fav Burgers Col --}}
+            <div class = "col-md-6">
+                <ul class = "list-group">
+                {{#each users}}
+                    {{!-- {{#unless this.devoured}} --}}
+                        <li class = "list-group-item" id = "yellow">
+                            <div class = "input-group" >
+                                <p>
+                                    {{this.name}}
+                                </p>
+                                <span class = "input-group-btn">
+                                    <form action="/api/users/{{this.id}}?_method=PUT" method="POST">
+                                        <input type="hidden" name="devoured" value="true">
+                                        <button type="submit" class="btn btn-danger btn-sm"> Report it!</button>
+                                    </form>
+                                </span>
+                            </div>
+                        </li>
+                    {{!-- {{/unless}} --}}
+                {{/each}}
+                </ul>
+            </div>
+
+
+            {{!-- Devoured Burger Col --}}
+            <div class = "col-md-6">
+                <ul class = "list-group">
+                {{#each users}}
+                    {{!-- {{#if this.devoured}} --}}
+                        <li class='list-group-item' id = "red">
+                            <p>
+                                {{this.name}}
+                            </p>
+                        </li>
+                    {{!-- {{/if}} --}}
+                {{/each}}
+                </ul>
+            </div>
+        </div>
+    </div>
+</main>
+
+<h4 class = "center-align">Enter a burger you want to eat and click the submit button</h4>
+
+<div class="row">
+  <div class="col s12" >
+    <div class = "center-align">
+    <form action="/api/users" method="POST">
+      <input type="text" id="name" name="name" placeholder="Add your favorite burger">
+      <button type="submit" class="btn btn-primary btn-sm" >Submit</button>
+    </form>
+    </div>
+  </div>
+</div>
