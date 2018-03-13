@@ -100,4 +100,4 @@ $('#ratingSubmitButton').on("click", function(event){
     //     $.post("/api/authors", comment)
     // .then(getComments);
     // }
-});
+ });

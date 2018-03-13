@@ -1,49 +1,66 @@
-console.log("LOADED BEERS JS")
+// console.log("LOADED BEERS JS");
 
-var beerMappingApi = "27be3f3d0eb10fc0eec138e6cbb4b8f8";
-var breweryDBApi = "4f342afe913f1b8c236195ee42af43eb";
+var request = require('request');
 
-// CANHGE TO USER SEARCH INPUT
-var userSearch = "orlando";
-
-var beerMappingQueryURL = "http://beermapping.com/webservice/locquery/" + beerMappingApi + "/" + userSearch + "&s=json";
-var breweryDBQueryApi = ;
- 
-// Landing page onclick to take display differnt ROUTE to the ratings and out Home page
-// $("#HOME BUTTON CLICK ID FORM TIM").on("click", function() {
-
-  
-// });
-
-
-// Search Button Click to then display the user search
-$("#test").on("click", function(event) {
+// // Search Button Click to then display the user search
+$("#beerSearchTitle").on("click", function(event) {
 	event.preventDefault();
-	console.log("CLICK");
+	console.log("CLICKED");
+  // get returned info from breweryDbApi
+  var base = "http://api.brewerydb.com/v2";
+  var beerName = document.getElementById('beerSearchInfo').value;
+  var bts = beerName.split(' ').join('_');
+  var type = "&type=beer";
+  var key = "&key=d9e3c76540e2267dd4f9e09ede879957";
+  var search = "/search?q=";
+  var fullUrl = base + search + bts + type + key;
 
-    $.ajax({
-        url: beerMappingQueryURL,
-        method: "GET"
-      })
-      .done(function(response) {
-
-      	console.log(response)
-
-        for (i = 0; i < response.length; i++) {
-        	
-        	// userSearch Brewery Name
-        	console.log("NAME: " + response[i].name);
-
-        	// userSearch Brewery Map return
-        	console.log("BLOGMAP:" + response[i].blogmap);
-
-        	// userSearch Brewery Rating
-        	console.log("OVERALL: " + response[i].overall);
-
-        	// Find More information about this brewery
-        	console.log("REVIEWLINK:" + response[i].reviewlink);
-
-        }
-
-      });
+  request(fullUrl, function (error, response, body) {
+  console.log('error:', error); // Print the error if one occurred
+  console.log('statusCode:', response && response.statusCode); // Print the response status code if a response was received
+  console.log('body:', body); // Print the HTML for the Google homepage.
 });
+
+});
+
+
+
+
+
+
+
+
+//   // var beerMappingApi = "27be3f3d0eb10fc0eec138e6cbb4b8f8";
+  
+//   // var userSearch = $("#userBeerSearch").val();
+
+//   // var beerMappingQueryURL = "http://beermapping.com/webservice/locquery/" + beerMappingApi + "/" + userSearch + "&s=json";
+//   // var breweryDbURL = "http://api.brewerydb.com/v2/?key=" + breweryDbApi + "/" + userSearch;
+
+//     // $.ajax({
+//     //     url: fullUrl,
+//     //     method: "GET"
+//     //   })
+//     //   .done(function(response) {
+
+//     //    console.log(response)
+
+//     //     for (i = 0; i < response.length; i++) {
+//           // // userSearch Brewery Name
+//           // console.log("NAME: " + response[i].name);
+
+//           // // userSearch Brewery Map return
+//           // console.log("BLOGMAP:" + response[i].blogmap);
+
+//           // // userSearch Brewery Rating
+//           // console.log("OVERALL: " + response[i].overall);
+
+//           // // Find More information about this brewery
+//           // console.log("REVIEWLINK:" + response[i].reviewlink);
+          
+
+//     //     }
+
+//     //   });
+
+
