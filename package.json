@@ -22,7 +22,6 @@
   },
   "homepage": "https://github.com/rdrachenberg/beer-app#readme",
   "dependencies": {
-    "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.18.2",
     "express": "^4.16.2",
     "express-handlebars": "^3.0.0",
@@ -33,4 +32,4 @@
     "sequelize": "^4.35.5"
   },
   "devDependencies": {}
-}
+
