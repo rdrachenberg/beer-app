@@ -84,3 +84,37 @@ p{
     font-family: 'Nanum Pen Script', cursive;
     font-size: 40;
 }
+
+/*BEER Education*/
+
+html,body{
+    margin:0;
+    padding:0;
+    height:100%;
+    width:100%;
+}
+
+.intro{
+    height:100%;
+    width:100%;
+    background: url("../images/beer-education.jpg");
+    margin:auto;
+    display: table;
+    top:0;
+    background-size:cover;
+}
+
+h1{
+    font-family: 'Caveat Brush', cursive;
+    font-size: 700%;
+}
+
+p,#toptext{
+    text-align:center;
+    font-family: 'Caveat Brush', cursive;
+    font-family: 'Rock Salt', cursive;
+    font-size: 300%;
+    color: black;
+    
+
+}
