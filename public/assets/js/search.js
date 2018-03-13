@@ -1,3 +1,4 @@
+
 function initAutocomplete() {
     var map = new google.maps.Map(document.getElementById('map'), {
       center: {lat: -33.8688, lng: 151.2195},
@@ -64,8 +65,9 @@ function initAutocomplete() {
       map.fitBounds(bounds);
     });
   }
-
-$('#ratingSubmitButton').click(function(){
+  $(function() {
+  
+$('#ratingSubmitButton').on("click", function(event){
     event.preventDefault();
     var userNameRating = $('#ratingName').val().trim();
     var userBeerRating = $('#ratingBeer').val().trim();
@@ -81,9 +83,21 @@ $('#ratingSubmitButton').click(function(){
         'Comment':userCommentRating
     }
 
-    console.table(comment);
-
-    console.log(userNameRating);
-    console.log(userCommentRating);
+   $.post("/api/authors", comment);
+   
+    
     document.getElementById('ratingsForm').reset();
+});
+
+// Function for retrieving authors and getting them ready to be rendered to the page
+// function getComments() {
+//     $.get("/api/authors", function(data) {
+//      console.log(data);
+//       }
+//     )};
+
+    // function postComments(commentData){
+    //     $.post("/api/authors", comment)
+    // .then(getComments);
+    // }
 });
