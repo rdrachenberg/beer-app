@@ -23,7 +23,8 @@ module.exports = function(app) {
     // In this case, just db.Author
     db.Post.findAll({
       where: query,
-      include: [db.Author]
+      include: [db.Author],
+      include: [db.Beer]
     }).then(function(dbPost) {
       res.json(dbPost);
     });

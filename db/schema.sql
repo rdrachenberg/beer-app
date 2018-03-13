@@ -1,4 +1,4 @@
-CREATE DATABASE IF NOT EXISTS beer_db;
+CREATE DATABASE beer_db;
 
 USE beer_db;
 

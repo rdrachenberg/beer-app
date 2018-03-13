@@ -1,3 +1,37 @@
-#test {
-	color: red;
+body{
+    background: url("../images/landingPageImage.jpg");
+    background-size: cover;
+    font-family: 'Berkshire Swash', cursive;
 }
+.getStartedDiv {
+    width: 50%;
+    height: 50%;
+    color: white;
+    text-shadow: 4px 4px #373737;
+
+    position: absolute;
+    top:40%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+        margin: auto;
+    text-align: center;
+  }
+.charcoalBackground{
+      background: #373737;
+  }
+.goldColor{
+    color: #C0B283;
+    text-shadow: .5px .5px white;
+}
+
+.btn-lg{
+    background: #C0B283;
+    text-shadow: 2px 2px #373737;
+    box-shadow: 2px 2px 5px white;
+}
+a:hover{
+    color: white;
+}
+

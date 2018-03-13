@@ -12,24 +12,24 @@ module.exports = function(app) {
 
   // Each of the below routes just handles the HTML page that the user gets sent to.
 
-  // index route loads view.html
+  // index route loads landingPage.html
   app.get("/", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/landingPage.html"));
   });
 
-  // cms route loads cms.html
+  // search route loads search.html
   app.get("/search", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/cms.html"));
+    res.sendFile(path.join(__dirname, "../public/search.html"));
+  });
+
+  // results route loads results.html
+  app.get("/results", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/results.html"));
   });
 
   // blog route loads blog.html
-  app.get("/results", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/blog.html"));
-  });
-
-  // authors route loads author-manager.html
   app.get("/blog", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/author-manager.html"));
+    res.sendFile(path.join(__dirname, "../public/blog.html"));
   });
 
 };

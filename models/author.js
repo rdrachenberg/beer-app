@@ -1,7 +1,13 @@
 module.exports = function(sequelize, DataTypes) {
   var Author = sequelize.define("Author", {
     // Giving the Author model a name of type STRING
-    name: DataTypes.STRING
+    name: {
+            type: DataTypes.STRING,
+            allowNull: false,
+            validate: {
+              len: [1]
+            }
+    },
   });
 
   Author.associate = function(models) {
@@ -10,6 +16,13 @@ module.exports = function(sequelize, DataTypes) {
     Author.hasMany(models.Post, {
       onDelete: "cascade"
     });
+    Author.belongsTo(models.Beer, {
+      foreignKey: {
+        allowNull: false,
+      incrementMe: { type: DataTypes.INTEGER, autoIncrement: true }        
+      },
+    });
+    
   };
 
   return Author;
