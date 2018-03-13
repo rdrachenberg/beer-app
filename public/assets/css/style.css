@@ -35,6 +35,12 @@ a:hover{
     color: white;
 }
 
+form.signup,
+form.login {
+    margin-top: 50px;
+}
+
+
 
 
 
