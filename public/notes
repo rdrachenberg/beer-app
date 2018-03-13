@@ -2,3 +2,10 @@
                       <h1 class="cover-heading">Beer "Making the World Go Around".</h1>
                       <p class="lead">There's nothing like that sweet satifaction of finding that next "GREAT BEER"!</p>
                       <iframe width="560" height="315" src="https://www.youtube.com/embed/Yux8ZBxiXB0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+
+
+                                <img class="d-block w-100" src="assets/images/types-of-beer-header.jpg" alt="First slide">
+                                <img class="d-block w-100" src="assets/images/beer-ingredients.png" alt="Second slide">
+                                <img class="d-block w-100" src="assets/images/grain-in-hand.jpg" alt="Third slide">
+                      

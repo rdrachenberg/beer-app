@@ -118,3 +118,37 @@ p,#toptext{
     
 
 }
+
+ #youTubeEd{
+    margin-top: 20px;
+  margin-bottom: 20px;
+  float: right;
+
+    
+    
+}
+
+#ted{
+    float: left;
+    margin-top: auto;
+    margin-bottom: 50px;
+}
+
+#randomBeers,d-block w-100{
+    display: table-cell;
+  vertical-align: middle;
+  width: 100%;
+  max-width: none;
+
+}
+
+.carousel-inner{
+    width:800px;
+    height:500px;
+    align: center;
+}
+
+.align{
+    align:center;
+}
+
