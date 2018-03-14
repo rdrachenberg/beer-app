@@ -39,13 +39,9 @@ module.exports = function(sequelize, DataTypes) {
     // We're saying that a Post should belong to an User
     // A Post can't be created without an User due to the foreign key constraint
     Post.belongsTo(models.User, {
+      as: "UserModel",
       foreignKey: 'owner_id' 
     });
-    // Post.hasMany(models.User); 
-    // Post.belongsToMany(models.Beer, {
-    //   through: "User",
-    //   foreignKey: 'owner_id'
-    // })
   };
 
   return Post;
