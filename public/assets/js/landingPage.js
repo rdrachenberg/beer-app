@@ -5,17 +5,22 @@ $('#registerButton').click(function(){
     var userEmail = $('#formEmail').val().trim();
     var userPassword = $('#formPassword').val().trim();
 
-    var user = {
+    var newUser = {
         'name': userName,
         'email': userEmail,
         'password': userPassword
     }
 
-    console.table(user);
+    console.table(newUser);
 
-    usersArr.unshift(user);
+    usersArr.unshift(newUser);
     console.log(usersArr)
-    $.post('/api/user', user);
+    // $.post('/api/user', user);
+    
+    $.post('/api/user', newUser), function(data){
+        console.log(data);
+        window.location.replace("/search");
+    };
     document.getElementById("signUpForm").reset();
 });
 
@@ -31,12 +36,11 @@ $('#loginButton').on("click", function(event){
         'password' : loginUserPassword
     }
 
-    $.post('/api/user', newUser), function(data){
-        console.log(data);
-    };
-    
+    window.location.replace('/search');
     // $.get('/search');
     
+    localStorage.setItem("storedFromLandingPage", newUser.name);  
+
 
     document.getElementById('signInForm').reset();
 });
