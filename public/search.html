@@ -19,145 +19,145 @@
     <link rel="stylesheet" href="assets/css/searchStyle.css">
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-
-
-    
 </head>
-  <body>
-        <nav class="navbar navbar-expand-lg charcoalBackground goldColor">
-                <a class="navbar-brand hoverable" href="#"><i class="fas fa-beer fa-3x goldColor"></i></a>
-                <button class="navbar-toggler charcoalBackground goldColor" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
+<body>
+    <nav class="navbar navbar-expand-lg charcoalBackground goldColor">
+        <a class="navbar-brand hoverable" href="#"><i class="fas fa-beer fa-3x goldColor"></i></a>
+        <button class="navbar-toggler charcoalBackground goldColor" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
               
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                  <ul class="navbar-nav ml-auto goldColor">
-                    <li class="nav-item">
-                      <a class="nav-link goldColor hoverable" href="#">About</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link goldColor hoverable" href="#">Contact</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link goldColor hoverable" href="#">Blog</a>
-                    </li>
-                    
-                    
-                  </ul>
-                  
-                </div>
-              </nav>
-
-
-              
-      <main >
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto goldColor">
+                <li class="nav-item">
+                    <a class="nav-link goldColor hoverable" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link goldColor hoverable" href="#">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link goldColor hoverable" href="#">Blog</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <main >
         <div class = "container">
             <!-- 1st row top of page will welcome user when user logs on - full screen-->
-            <div class = "row">
+            <div class = "row"> <!-- row covers a col-12 full screen -->
                 <div class = "col-md-12" id ="welcomeUser">
+                </div>
+            </div> <!-- end of welcome user row -->
+            <!-- row with search bar and button in 1st col and instructions to rate in col 2 -->
+            <div class = "row"> <!--row contains 2 cols both are h2 elements-->
+            <!--Search bar  -->
+                <div class = "col-md-5 marginSpace marginRight"> <!--search instructions h2-->
+                    <h2>Search for a brewery near you!</h2>
+                </div>
+                <div class ="col-md-2"> <!-- empty div to give some space inbetween to col -->
+                </div>
+            <!-- instructions for review and rating -->
+                <div class = "col-md-5 marginSpace input-group">
+                    <h2>Leave a Review</h2>
+                    <button class = "btn btn-lg input-group-btn" id = "ratingSubmitButton">Submit</button>
+                </div> <!-- end of 3rd col -->
+            </div> <!--end of h2 row -->
+            <!--3rd row includes map and ratings area  -->
+            <div class = "row marginBetween"> <!--contains 2 col map and leave review-->
+                <!-- map area -->
+                <div class = "col-md-5 marginBetween">
+                    <input id="pac-input" class="controls" type="text" placeholder="Search Box" value="brewery">
+                    <div id="map"></div>
+                </div>
+                <div class = "col-md-2"> <!--empty div for spacing-->
+                </div>
+                <!-- Leave review area -->
+                <div class = "col-md-5 ratings hoverable marginBetween">
+                    <!-- Name -->
+                    <form action="" id = "ratingsForm">
+                        <div class="md-form">
+                            <i class="fa fa-user prefix goldColor"></i>
+                            <input type="text" id="ratingName" class="form-control" placeholder="Your Name">
+                            <label for="ratingName"></label>
+                        </div>
+                        <!-- Beer -->
+                        <div class="md-form">
+                            <i class="fas fa-beer prefix goldColor"></i>
+                            <input type="text" id="ratingBeer" class="form-control" placeholder= "Beer">
+                            <label for="ratingBeer"></label>
+                        </div>
+                        <!-- Brewery -->
+                        <div class="md-form">
+                            <i class="fas fa-home prefix goldColor"></i>
+                            <input type="text" id="ratingBrewery" class="form-control" placeholder= "Brewery">
+                            <label for="ratingBrewery"></label>
+                        </div>
+                        <!-- Rating -->
+                        <div class="md-form">
+                            <i class="fas fa-star prefix goldColor"></i>
+                            <input type="text" id="ratingStar" class="form-control" placeholder= "Rating">
+                            <label for="ratingStar"></label>
+                        </div>
+                        <!-- Review -->
+                        <div class="md-form">
+                            <i class="fas fa-pencil-alt prefix goldColor"></i>
+                            <textarea type="text" id="ratingComment" class="form-control md-textarea" rows="3" placeholder = "Leave a Review"></textarea>
+                            <label for="ratingComment"></label>
+                        </div>
+                    </form> <!--end of leave review form-->
+                </div> <!-- end of leave review div col -->
+            </div> <!-- map and review .row -->   
+
+            <!-- Search for information Based from city search -->
+            <div class="row marginBetween">
+              <div class="col-md-5 marginBetween marginSpace">
+                <h3>Look for Brewery Information</h3>
+                <br>
+                <input type="text" id="brewerySearchInfo">
+                <button class = "btn btn-lg input-group-btn" id = "breweryMappingBtn" placeholder="Search For More Information">Search</button>
+              </div>
+
+              <div class="col-md-2 marginBetween">
+                <!-- bank space -->
+              </div>
+
+              <div class="col-md-5 marginBetween marginSpace">
+                <div class="panel panel-default" id="beerInfoPanel">
+                <div class="panel-heading">
+                  <h3 class="panel-title">Searched Brewery Ratings</h3>
+                </div>
+                <div class="panel-body" id="returnedBreweryInfoBtn">
 
                 </div>
-            </div>
-            <!-- row with search bar and button in 1st col and instructions to rate in col 2 -->
-          <div class = "row">
-            <!--Search bar  -->
-            <div class = "col-md-5 marginSpace marginRight">
-                <h2>Search for a brewery by zip code</h2>
-                   
-            </div>
-            <div class ="col-md-2">
-
-            </div>
-            <!-- instructions for review and rating -->
-            <div class = "col-md-5 marginSpace input-group">
-                <h2>Leave a Review</h2>
-                <button class = "btn btn-lg input-group-btn" id = "ratingSubmitButton">Submit</button>
-            </div>
-        </div>
-        <!--2nd row includes map and ratings area  -->
-        <div class = "row marginBetween">
-            <!-- map area -->
-            <div class = "col-md-5 marginBetween">
-                <input id="pac-input" class="controls" type="text" placeholder="Search Box" value="brewery">
-                <div id="map"></div>
-            </div>
-            <div class = "col-md-2">
+                </div>
+              </div>
 
             </div>
 
-            <div class = "col-md-5 ratings hoverable marginBetween">
-                <!-- Name -->
-                <form action="" id = "ratingsForm">
-                  <div class="md-form">
-                      <i class="fa fa-user prefix goldColor"></i>
-                      <input type="text" id="ratingName" class="form-control" placeholder="Your Name">
-                      <label for="ratingName"></label>
-                  </div>
-                  <!-- Beer -->
-                  <div class="md-form">
-                      <i class="fas fa-beer prefix goldColor"></i>
-                      <input type="text" id="ratingBeer" class="form-control" placeholder= "Beer">
-                      <label for="ratingBeer"></label>
-                  </div>
-                  <!-- Brewery -->
-                  <div class="md-form">
-                      <i class="fas fa-home prefix goldColor"></i>
-                      <input type="text" id="ratingBrewery" class="form-control" placeholder= "Brewery">
-                      <label for="ratingBrewery"></label>
-                  </div>
-                  <!-- Rating -->
-                  <div class="md-form">
-                      <i class="fas fa-star prefix goldColor"></i>
-                      <input type="text" id="ratingStar" class="form-control" placeholder= "Rating">
-                      <label for="ratingStar"></label>
-                  </div>
-                  <!-- Review -->
-                  <div class="md-form">
-                          <i class="fas fa-pencil-alt prefix goldColor"></i>
-                          <textarea type="text" id="ratingComment" class="form-control md-textarea" rows="3" placeholder = "Leave a Review"></textarea>
-                          <label for="ratingComment"></label>
-                  </div>
-                </form>
-            </div>
-        </div>
-
-        <div class = "row">
-            <!-- search for beers and return the info from brewery api -->
-            <div class = "col-md-5 marginSpace input-group">
-                <h2>Look for beers</h2>
-                <input type="text" id="beerSearchInfo" placeholder="Search then Taste!">
-                <button class = "btn btn-lg input-group-btn" id = "beerSearchTitle">Search for a beer</button>
-            </div>
-            <div class ="col-md-2">
-            <!-- BLANK -->
-            </div>
-            <div class = "col-md-5 marginSpace marginRight">
-              HELLO MD 5
-            </div>
-        </div>  
-      </div>
-        
-      </main>
-
-          <script src="assets/js/search.js"></script>
-          <script src="assets/js/beers.js"></script>
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script
-  src="https://code.jquery.com/jquery-3.3.1.js"
-  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-  crossorigin="anonymous"></script>
-    <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
+            <!-- modal to dsplay the button info -->
+            <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                  <h3 id="myModalLabel">Modal header</h3>
+              </div>
+              <div class="modal-body">
+                  <p>One fine body…</p>
+              </div>
+              <div class="modal-footer">
+                  <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+                  <button class="btn btn-primary">Save changes</button>
+              </div>
+          </div>
+        </div> <!-- .container> -->
+    </main>
     
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDjWrp8N26ztrof22OxQE2HQfNi5-E5Kqo&libraries=places&callback=initAutocomplete"async defer></script>
-
-
-
-  
-  </body>
+<script src="assets/js/search.js"></script>
+<script src="assets/js/beers.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDjWrp8N26ztrof22OxQE2HQfNi5-E5Kqo&libraries=places&callback=initAutocomplete"async defer></script>
+</body>
 </html>
 
 <!-- var breweryDbApiKey = a33c19bd014beef6a399d2811d6c62c3; -->

@@ -137,3 +137,18 @@ input[type="text"]{
       #target {
         width: 345px;
       }
+
+
+/*For Brewery rating Panel*/
+#beerInfoPanel {
+  border: 3px solid black;
+}
+
+.panel-title{
+  text-align: center;
+
+}
+
+button{
+  margin:5px;
+}
