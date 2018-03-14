@@ -28,11 +28,11 @@ module.exports = function (sequelize, DataTypes) {
         // Associating Beer with Posts
         // When an Beer is deleted, also delete any associated Posts
         Beer.belongsTo(models.User, {
-            forignKey: "user_id",
+            foreignKey: "user_id",
             onDelete: "cascade"
         });
         Beer.hasMany(models.Post, {
-            forignKey: "user_id",
+            foreignKey: "user_id",
             onDelete: "cascade"
         });
 
