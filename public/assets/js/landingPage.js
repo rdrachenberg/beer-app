@@ -6,9 +6,9 @@ $('#registerButton').click(function(){
     var userPassword = $('#formPassword').val().trim();
 
     var user = {
-        'userName': userName,
-        'userEmail': userEmail,
-        'userPassword': userPassword
+        'name': userName,
+        'email': userEmail,
+        'password': userPassword
     }
 
     console.table(user);
