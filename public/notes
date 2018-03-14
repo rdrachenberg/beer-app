@@ -8,4 +8,9 @@
                                 <img class="d-block w-100" src="assets/images/types-of-beer-header.jpg" alt="First slide">
                                 <img class="d-block w-100" src="assets/images/beer-ingredients.png" alt="Second slide">
                                 <img class="d-block w-100" src="assets/images/grain-in-hand.jpg" alt="Third slide">
-                      
+                     
+                     
+                      <link rel="stylesheet" href="assets/css/style.css">
+
+
+                      <section class="beerEdintro">
