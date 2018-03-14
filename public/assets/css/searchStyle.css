@@ -137,3 +137,9 @@ input[type="text"]{
       #target {
         width: 345px;
       }
+
+      #beer-search{
+        text-align: center;
+        margin-top: 10%;
+        margin-bottom: 10%;
+      }

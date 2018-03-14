@@ -104,9 +104,9 @@
         <input type="password" id="materialFormRegisterConfirmEx" class="form-control" placeholder="Confirm Password" data-match="#materialFormRegisterPasswordEx" data-match-error="Sorry passwords do not match please try again" required>
         <label for="materialFormRegisterConfirmEx"></label>
     </div>
-    <div class="help-block with-errors"></div>
-      <div class="form-group text-center mt-4">
-          <button class="btn btn-primary" type="submit">Register</button>
+
+    <div class="text-center mt-4">
+        <button class="btn btn-primary" type="submit" id = "registerButton" data-dismiss = "modal">Register</button>
     </div>
     
 </form>
@@ -130,22 +130,29 @@
 <form id = "signInForm">
     <p class="h4 text-center mb-4">Sign in</p>
 
+      <!-- Material input email -->
+      <div class="md-form">
+          <i class="fa fa-user prefix grey-text"></i>
+          <input type="name" id="loginName" class="form-control" placeholder="Your Name" autocomplete="name">
+          <label for="loginName"></label>
+      </div>
+
     <!-- Material input email -->
     <div class="md-form">
         <i class="fa fa-envelope prefix grey-text"></i>
-        <input type="email" id="loginEmail" class="form-control" placeholder="Your Email">
+        <input type="email" id="loginEmail" class="form-control" placeholder="Your Email" autocomplete="email">
         <label for="loginEmail"></label>
     </div>
 
     <!-- Material input password -->
     <div class="md-form">
         <i class="fa fa-lock prefix grey-text"></i>
-        <input mdbactive type="password" id="loginPassword" class="form-control" placeholder="Your Password">
+        <input mdbactive type="password" id="loginPassword" class="form-control" placeholder="Your Password" autocomplete="current-password">
         <label for="loginPassword"></label>
     </div>
 
     <div class="text-center mt-4">
-        <button class="btn btn-default" type="submit" id = "loginButton">Login</button>
+        <button class="btn btn-default" type="submit" id = "loginButton" data-dismiss = "modal">Login</button>
     </div>
 </form>
 <!-- Material form login -->  
@@ -157,7 +164,11 @@
       </main>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="assets/js/landingPage.js"></script>

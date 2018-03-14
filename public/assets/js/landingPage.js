@@ -5,36 +5,40 @@ $('#registerButton').click(function(){
     var userEmail = $('#formEmail').val().trim();
     var userPassword = $('#formPassword').val().trim();
 
-    var user = {
-        'userName': userName,
-        'userEmail': userEmail,
-        'userPassword': userPassword
+    var newUser = {
+        'name': userName,
+        'email': userEmail,
+        'password': userPassword
     }
 
-    console.table(user);
+    console.table(newUser);
 
-    usersArr.unshift(user);
+    usersArr.unshift(newUser);
     console.log(usersArr)
-
+    // $.post('/api/user', user);
+    
+    $.post('/api/user', newUser), function(data){
+        console.log(data);
+        window.location.replace("/search");
+    };
     document.getElementById("signUpForm").reset();
 });
 
-$('#loginButton').click(function(){
+$('#loginButton').on("click", function(event){
     event.preventDefault();
+    var loginName = $('#loginName').val().trim();
     var loginUserEmail = $('#loginEmail').val().trim();
     var loginUserPassword = $('#loginPassword').val().trim();
 
-    var currentUser = {
-        'userEmail' : loginUserEmail,
-        'userPassword' : loginUserPassword
+    var newUser = {
+        'name' : loginName,
+        'email' : loginUserEmail,
+        'password' : loginUserPassword
     }
 
-    console.table(currentUser);
-
-    console.log(loginUserEmail);
-    console.log(loginUserPassword);
+    window.location.replace('/search');
+    // $.get('/search');
+    
 
     document.getElementById('signInForm').reset();
 });
-
- 

@@ -1,3 +1,4 @@
+//google maps API code
 function initAutocomplete() {
     var map = new google.maps.Map(document.getElementById('map'), {
       center: {lat: -33.8688, lng: 151.2195},
@@ -63,9 +64,14 @@ function initAutocomplete() {
       });
       map.fitBounds(bounds);
     });
-  }
+  } //end of google maps funtion
+  
+  
+  $(function() { //document ready
 
-$('#ratingSubmitButton').click(function(){
+    
+  
+$('#ratingSubmitButton').on("click", function(event){
     event.preventDefault();
     var userNameRating = $('#ratingName').val().trim();
     var userBeerRating = $('#ratingBeer').val().trim();
@@ -81,9 +87,15 @@ $('#ratingSubmitButton').click(function(){
         'Comment':userCommentRating
     }
 
-    console.table(comment);
+    $.post('/api/posts', comment), function(data){
+        console.log(data);
+    };
 
-    console.log(userNameRating);
-    console.log(userCommentRating);
+    
     document.getElementById('ratingsForm').reset();
 });
+
+
+
+});
+

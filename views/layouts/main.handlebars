@@ -1,26 +1,26 @@
-        <nav class="navbar navbar-expand-lg charcoalBackground goldColor">
-                <a class="navbar-brand" href="#"><i class="fas fa-beer fa-3x goldColor"></i></a>
-                <button class="navbar-toggler charcoalBackground goldColor" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-              
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                  <ul class="navbar-nav ml-auto goldColor">
-                    <li class="nav-item">
-                      <a class="nav-link goldColor" href="assets/images/beer-taps-across.jpg">About</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link goldColor" href="assets/images/beer-on-wall.jpg" alt="features-2">Contact</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link goldColor" href="assets/images/types-of-beer-header.jpg" alt="features-2"></a>Blog</a>
-                    </li>
-                    
-                    
-                  </ul>
-                  <form class="form-inline my-2 my-lg-0">
-                    <button class="btn btn-outline-goldColor my-2 my-sm-0 goldColor" type="submit">Join Now</button>
-                  </form>
-                </div>
-              </nav>
- 
+{{!-- Setup the main.handlebars file so it's able to be used by Handlebars --}}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+        {{!-- jquery --}}
+		<script src="https://code.jquery.com/jquery.js"></script>
+
+        {{!-- Bootstrap --}}
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		
+        {{!-- Google Font --}}
+        <link href="https://fonts.googleapis.com/css?family=Bangers" rel="stylesheet">
+        
+        {{!-- CSS style sheet --}}
+        {{!-- <link rel="stylesheet" href="/assets/css/burger_style.css" type="text/css" /> --}}
+        
+		<title>Eat-Da-Burger</title>
+	</head>
+	<body>
+
+		{{{ body }}}
+        
+	</body>
+</html>
