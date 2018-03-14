@@ -69,7 +69,14 @@ function initAutocomplete() {
   
   $(function() { //document ready
 
-    
+var userFromLandingPage = localStorage.getItem("storedFromLandingPage")
+ 
+var welcomeUser = userFromLandingPage;
+
+var welcomeUserDiv = $('<div>');
+
+$('#welcomeUser').append(welcomeUserDiv);
+welcomeUserDiv.append(userFromLandingPage);
   
 $('#ratingSubmitButton').on("click", function(event){
     event.preventDefault();
@@ -96,6 +103,7 @@ $('#ratingSubmitButton').on("click", function(event){
 });
 
 
+console.log(welcomeUser);
 
 });
 

@@ -39,6 +39,8 @@ $('#loginButton').on("click", function(event){
     window.location.replace('/search');
     // $.get('/search');
     
+    localStorage.setItem("storedFromLandingPage", newUser.name);  
+
 
     document.getElementById('signInForm').reset();
 });
