@@ -10,6 +10,8 @@ var path = require("path");
 // =============================================================
 module.exports = function(app) {
 
+  
+
   // Each of the below routes just handles the HTML page that the user gets sent to.
 
   // index route loads landingPage.html
@@ -24,12 +26,21 @@ module.exports = function(app) {
 
   // results route loads results.html
   app.get("/results", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/results.html"));
+    // res.sendFile(path.join(__dirname, "../public/results.html"));
+    res.render("index");
   });
 
   // blog route loads blog.html
   app.get("/blog", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/blog.html"));
+  });
+  // login route loads blog.html
+  app.get("/login", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/login.html"));
+  });
+  // signup route loads blog.html
+  app.get("/signup", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/signup.html"));
   });
 
 };
