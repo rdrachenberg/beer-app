@@ -143,3 +143,16 @@ input[type="text"]{
         margin-top: 10%;
         margin-bottom: 10%;
       }
+      
+      #map {
+        height: 100%;
+      }
+
+      /* Optional: Makes the sample page fill the window. */
+
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }   
