@@ -74,9 +74,14 @@ var userFromLandingPage = localStorage.getItem("storedFromLandingPage")
 var welcomeUser = userFromLandingPage;
 
 var welcomeUserDiv = $('<div>');
+var welcomeUserGreeting = $('<h1>');
+
+
 
 $('#welcomeUser').append(welcomeUserDiv);
-welcomeUserDiv.append(userFromLandingPage);
+// welcomeUserDiv.append(userFromLandingPage);
+welcomeUserDiv.append(welcomeUserGreeting);
+welcomeUserGreeting.append('Welcome ' + userFromLandingPage);
   
 $('#ratingSubmitButton').on("click", function(event){
     event.preventDefault();

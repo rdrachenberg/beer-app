@@ -38,9 +38,9 @@ input::-webkit-input-placeholder{
     color: #C0B283 !important;
     text-shadow: .5px .5px white;    
 }
-input:-moz-placeholder {
+/* input:-moz-placeholder {
     color:red;
-}
+} */
 textarea::-webkit-input-placeholder{
     color: #C0B283 !important;
     text-shadow: .5px .5px white;    
@@ -142,4 +142,9 @@ input[type="text"]{
         text-align: center;
         margin-top: 10%;
         margin-bottom: 10%;
+      }
+      .center-align{
+        text-align: center;
+        margin-top: 10%;
+        background: white;
       }
