@@ -72,7 +72,7 @@ html,body{
 h1{
     font-family: 'Caveat Brush', cursive;
     font-size: 700%;
-}
+}   
 
 p,#toptext{
     text-align:center;
@@ -80,9 +80,11 @@ p,#toptext{
     font-family: 'Rock Salt', cursive;
     font-size: 300%;
     font-style: bold;
-    color: black;
-    
-
+    color: rgb(21, 67, 168);
+    text-shadow: 3px 3px #373737;
+}
+iframe{
+    float: right;
 }
 
  #youTubeEd{
@@ -100,12 +102,13 @@ p,#toptext{
     margin-bottom: 50px;
 }
 
-.d-block, .w-100{
+.carousel-item active{
     display: table-cell;
     vertical-align: middle;
     width: 100%;
     max-width: none;
     float:center;
+    align-content: center;
  
 
 }
@@ -133,10 +136,25 @@ h2{
     color:chartreuse;
 }
 
-.lead{
-    background: url("../images/Europemap.jpg");
+.lead1{
+    background-color: rgb(131, 18, 18);
+    color: azure;
     background-size: auto;
-    
-    
+    font-family: 'Poiret One', cursive;
+    font-size: large;
+}
+
+.lead2{
+    background-color: rgb(131, 18, 18);
+    color: azure;
+    font-family: 'Poiret One', cursive;
+    font-size: large;
+}
+
+.lead3{
+    background-color: rgb(131, 18, 18);
+    color: azure;
+    font-family: 'Poiret One', cursive;
+    font-size: large;
 
 }
