@@ -10,7 +10,7 @@ $("#breweryMappingBtn").on("click", function(event) {
   	
   	var userSearch = $("#brewerySearchInfo").val();
   	var beerMappingApi = "27be3f3d0eb10fc0eec138e6cbb4b8f8";
-	var beerMappingQueryURL = "http://beermapping.com/webservice/locquery/" + beerMappingApi + "/" + userSearch + "&s=json";
+	var beerMappingQueryURL = "https://beermapping.com/webservice/locquery/" + beerMappingApi + "/" + userSearch + "&s=json";
 
 	if (userSearch == ""){
 		console.log("NO SEARCH");
