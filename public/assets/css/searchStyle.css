@@ -148,3 +148,21 @@ input[type="text"]{
         margin-top: 10%;
         background: white;
       }
+      .commentSectionClass{
+        background: #373737;
+        font-size: 16px;
+        border: 1px solid #C0B283;
+        color: #C0B283;
+        /* padding: 1%;
+        margin: 1%; */
+      }
+      #marginBottom{
+        margin-bottom: 5%;
+      }
+      .individualComments{
+        border: 1 px solid black;
+      }
+
+      .commentSectionClass p{
+        font-weight: bold;
+      }

@@ -26,8 +26,8 @@ module.exports = function(app) {
 
   // results route loads results.html
   app.get("/results", function(req, res) {
-    // res.sendFile(path.join(__dirname, "../public/results.html"));
-    res.render("index");
+    res.sendFile(path.join(__dirname, "../public/results.html"));
+    //res.render("index");
   });
 
   // blog route loads blog.html

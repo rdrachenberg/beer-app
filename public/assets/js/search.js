@@ -76,23 +76,23 @@ var welcomeUser = userFromLandingPage;
 var welcomeUserDiv = $('<div>');
 var welcomeUserGreeting = $('<h1>');
 
-
-
 $('#welcomeUser').append(welcomeUserDiv);
 // welcomeUserDiv.append(userFromLandingPage);
 welcomeUserDiv.append(welcomeUserGreeting);
 welcomeUserGreeting.append('Welcome ' + userFromLandingPage);
+
+$('#ratingName').val(userFromLandingPage);
+
   
 $('#ratingSubmitButton').on("click", function(event){
     event.preventDefault();
-    var userNameRating = $('#ratingName').val().trim();
     var userBeerRating = $('#ratingBeer').val().trim();
     var userBreweryRating = $('#ratingBrewery').val().trim();
     var userStarRating = $('#ratingStar').val().trim();
     var userCommentRating = $('#ratingComment').val().trim();
 
     var comment = {
-        'User': userNameRating,
+        'UserName': userFromLandingPage,
         'Beer': userBeerRating,
         'Brewery': userBreweryRating,
         'Stars' : userStarRating,
@@ -101,14 +101,36 @@ $('#ratingSubmitButton').on("click", function(event){
 
     $.post('/api/posts', comment), function(data){
         console.log(data);
-    };
+       };
+       
+    $.get('/api/posts').then(function(commentData){
+         console.log(commentData);
+         console.log(commentData.Brewery);
+         for (var i = 0; i < commentData.length; i++){
+          console.log(commentData)
+          var commentSection = $('<div>');
+          commentSection.addClass('col-md-3 commentSectionClass hoverable');
+          var userCommentName = $('<p>');
+          var userCommentBeer = $('<p>');
+          var userCommentBrewery = $('<p>');
+          var userCommentStars = $('<p>');
+          var userCommentComment = $('<p>');
+          userCommentName.append("Name: " + commentData[i].UserName);
+          userCommentBeer.append("Beer rated: " + commentData[i].Beer);
+          userCommentBrewery.append("Brewery rated: " + commentData[i].Brewery);
+          userCommentStars.append("Rating: " + commentData[i].Stars);
+          userCommentComment.append("Comments: " + commentData[i].Comment);
+          commentSection.append(userCommentName, userCommentBeer, userCommentBrewery, userCommentStars, userCommentComment);
+          var userComments = $('#userComments');
+          userComments.prepend(commentSection);
+         }
+         
+           
+    });
+  
 
     
     document.getElementById('ratingsForm').reset();
 });
-
-
-console.log(welcomeUser);
-
 });
 
