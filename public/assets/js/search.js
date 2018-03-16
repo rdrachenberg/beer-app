@@ -1,7 +1,7 @@
 //google maps API code
 function initAutocomplete() {
     var map = new google.maps.Map(document.getElementById('map'), {
-      center: {lat: -33.8688, lng: 151.2195},
+      center: { lat: 28.538336, lng: -81.379234},
       zoom: 13,
       mapTypeId: 'roadmap'
     });
@@ -74,20 +74,28 @@ var userFromLandingPage = localStorage.getItem("storedFromLandingPage")
 var welcomeUser = userFromLandingPage;
 
 var welcomeUserDiv = $('<div>');
+var welcomeUserGreeting = $('<h1>');
+
+
+
+welcomeUserDiv.addClass("loggedInUser");
+    console.log("loggedInUser");
 
 $('#welcomeUser').append(welcomeUserDiv);
-welcomeUserDiv.append(userFromLandingPage);
+// welcomeUserDiv.append(userFromLandingPage);
+welcomeUserDiv.append(welcomeUserGreeting);
+welcomeUserGreeting.append('Welcome ' + userFromLandingPage);
   
 $('#ratingSubmitButton').on("click", function(event){
     event.preventDefault();
-    var userNameRating = $('#ratingName').val().trim();
+    var userNameRating = $('.loggedInUser').text();
     var userBeerRating = $('#ratingBeer').val().trim();
     var userBreweryRating = $('#ratingBrewery').val().trim();
     var userStarRating = $('#ratingStar').val().trim();
     var userCommentRating = $('#ratingComment').val().trim();
 
     var comment = {
-        'User': userNameRating,
+        'UserName': userNameRating,
         'Beer': userBeerRating,
         'Brewery': userBreweryRating,
         'Stars' : userStarRating,
