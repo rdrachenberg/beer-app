@@ -14,7 +14,7 @@ var brewdb = new BreweryDb('a33c19bd014beef6a399d2811d6c62c3');
 // Sets up the Express App
 // =============================================================
 var app = express();
-var PORT = process.env.PORT || 3306;
+var PORT = process.env.PORT || 8080;
 
 // Requiring our models for syncing
 var db = require("./models");
