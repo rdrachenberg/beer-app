@@ -1,7 +1,7 @@
 //google maps API code
 function initAutocomplete() {
     var map = new google.maps.Map(document.getElementById('map'), {
-      center: {lat: -33.8688, lng: 151.2195},
+      center: { lat: 28.538336, lng: -81.379234},
       zoom: 13,
       mapTypeId: 'roadmap'
     });
@@ -76,6 +76,11 @@ var welcomeUser = userFromLandingPage;
 var welcomeUserDiv = $('<div>');
 var welcomeUserGreeting = $('<h1>');
 
+
+
+
+welcomeUserDiv.addClass("loggedInUser");
+    console.log("loggedInUser");
 $('#welcomeUser').append(welcomeUserDiv);
 // welcomeUserDiv.append(userFromLandingPage);
 welcomeUserDiv.append(welcomeUserGreeting);
@@ -86,6 +91,7 @@ $('#ratingName').val(userFromLandingPage);
   
 $('#ratingSubmitButton').on("click", function(event){
     event.preventDefault();
+    var userNameRating = $('.loggedInUser').text();
     var userBeerRating = $('#ratingBeer').val().trim();
     var userBreweryRating = $('#ratingBrewery').val().trim();
     var userStarRating = $('#ratingStar').val().trim();
@@ -132,5 +138,11 @@ $('#ratingSubmitButton').on("click", function(event){
     
     document.getElementById('ratingsForm').reset();
 });
+
+
+
+
+console.log(welcomeUser);
+
 });
 

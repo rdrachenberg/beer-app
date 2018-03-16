@@ -138,11 +138,41 @@ input[type="text"]{
         width: 345px;
       }
 
+
+/*For Brewery rating Panel*/
+#beerInfoPanel {
+  border: 3px solid black;
+}
+
+.panel-title{
+  text-align: center;
+
+}
+
+button{
+  margin:5px;
+}
+
       #beer-search{
         text-align: center;
         margin-top: 10%;
         margin-bottom: 10%;
       }
+
+      
+      #map {
+        height: 100%;
+      }
+
+      /* Optional: Makes the sample page fill the window. */
+
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }   
+
       .center-align{
         text-align: center;
         margin-top: 10%;
@@ -166,3 +196,4 @@ input[type="text"]{
       .commentSectionClass p{
         font-weight: bold;
       }
+
