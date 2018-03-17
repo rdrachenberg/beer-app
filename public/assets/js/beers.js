@@ -38,7 +38,7 @@ $("#breweryMappingBtn").on("click", function(event) {
           	// Find More information about this brewery
           	console.log("REVIEWLINK:" + response[i].reviewlink);
           
-          	var btn = "<center><button type='button' class='btn goldColor' data-number=" + i + " data-toggle='modal' data-target='#breweryInfo' name='"  + response[i].name + "' id=button" + i + ">" + "<h4>" + response[i].name + "</h4>" + "\n" + "</button></center>";
+          	var btn = "<center><button style=background:#C0B283; type='button' class='btn' data-number=" + i + " data-toggle='modal' data-target='#breweryInfo' name='"  + response[i].name + "' id=button" + i + ">" + "<h4>" + response[i].name + "</h4>" + "\n" + "</button></center>";
           	// $("<button>").attr('margin', '10');
           	$("#returnedBreweryInfoBtn").append(btn);
 
@@ -57,7 +57,6 @@ $("#breweryMappingBtn").on("click", function(event) {
               $(".modal-body").append(glbBrews[$(this).attr('data-number')].street + "<br>" + glbBrews[$(this).attr('data-number')].city + ", " + glbBrews[$(this).attr('data-number')].state + " " + glbBrews[$(this).attr('data-number')].zip);
               $(".modal-body").append("<h4>Phone Number:</h4>" + glbBrews[$(this).attr('data-number')].phone);
               $(".modal-body").append("<h4>Website: </h4>" +" <a href='http://"+ glbBrews[$(this).attr('data-number')].url + "' target=_blank>" + glbBrews[$(this).attr('data-number')].url + "</a>");
-              $(".modal-body").append("<h4>Review Link: </h4>" +" <a href='http://"+ glbBrews[$(this).attr('data-number')].reviewlink + "' target=_blank>" + glbBrews[$(this).attr('data-number')].reviewlink + "</a>");
             
           }); 
 
