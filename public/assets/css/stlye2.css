@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapi.com/css?family=Raleway');
+@import url('https://fonts.googleapi.com/css?family=Oswald');
+
+html,body{
+    margin:0;
+    padding:0;
+    height:100%;
+    width:100%;
+}
+
+.intro{
+    height:100%;
+    width:100%;
+    margin:auto;
+    background:url(https://cdn.pixabay.com/photo/2017/06/27/14/37/beers-2447512_960_720.jpg) no-repeat 50% 50%;
+    display: table;
+    top:0;
+    background-size:cover;
+}
+
+.intro .inner{
+  display: table-cell;
+  vertical-align: middle;
+  width: 100%;
+  max-width: none;
+
+}
+
+.content{
+  max-width:500px;
+  margin:0 auto;
+  text-align: center;
+}
+
+.content h1{
+  font-family: 'Permanent Marker', cursive;
+  font-family: 'Chewy', cursive;
+  color:rgb(253, 253, 245);
+  text-shadow:0px 0px 300px #000;
+  font-size: 500%;
+}
+
+.btn{
+  border-radius: 10px;
+  font-family: 'Chewy', cursive;
+  color: rgba(246, 250, 12, 0.925);
+  font-size:300%;
+  padding: 10px 20px;
+  border:solid #036A81 3px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.btn:hover{
+  color:#fff;
+  border:solid #fff 3px;
+}
+
+.content p{
+  font-family: 'Permanent Marker', cursive;
+  font-family: 'Chewy', cursive;
+  font-family: 'Sigmar One', cursive;
+  text-align: center;
+  color:gold;
+  font-size:200%;
+  
+}

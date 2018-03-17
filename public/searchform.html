@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset = "UTF-8">
+  <title>Search Beer Locations</title>
+  <!--Bootstrap link-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <!--jQuery link-->
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+
+  <!--Bootstrap JavaScript link-->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+  <!--Font Awesome-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+  <!--Chosen Link-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.css">
+  <!--Cloud Fare jQuery-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
+  <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+</head>
+
+<body onload="getbeerresults();">
+  <script>
+    function getbeerresults(){
+      $(document).ready(function() {
+      $('#example').DataTable( {
+          "ajax": 'http://beermapping.com/webservice/loccity/432324ca571e07062425721c17879e2e/new%20york%2cNY'
+        });
+      });
+    };  
+  
+  </script>
+    <form action="https://beermapping.com/search/" method="GET">
+      <input type="hidden" name="source" value="nav">
+      <input id="navsearch" type="text" size="24" placeholder="city/state" name="q"> 
+      <input class="btn-submit" type="submit" value="go">
+    </form>
+
+    <table class="table table-striped table-bordered table-condensed table-hover display" id="example">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Address</th>
+                <th>Phone</th>
+            </tr>
+        </thead>
+      <!--this is header row one
+        <tr>
+          <th>Name</th>
+          <th>Address</th>
+          <th>Phone</th>
+        </tr>
+        <!--this is table row one--
+        <tr>
+          <td>Heartland Brewery Union Square</td>
+          <td>35 Union Square West</td>
+          <td>(212)645-3400</td>
+        </tr>
+        <!--this is table row two- 
+        <tr>
+          <td>February</td>
+          <td>$80</td>
+          <td>$80</td>
+          
+        </tr>-->
+      </table>
+
+
+
+</body>
+</html>

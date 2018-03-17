@@ -1,0 +1,181 @@
+/*nav bar*/
+.getStartedText{
+    width: 50%;
+    height: 50%;
+    color: rgb(246, 250, 26);
+    text-shadow: 4px 4px #0d6669;
+
+    position: absolute;
+    top:40%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+        margin: auto;
+    text-align: center;
+  }
+
+  body{
+    font-family: "brandon-grotesque",sans-serif;
+}
+.getStartedDiv {
+    height:100%;
+    width:100%;
+    margin:auto;
+  }
+  
+.charcoalBackground{
+      background: #373737;
+  }
+.goldColor{
+    color: #C0B283;
+    text-shadow: .5px .5px white;
+}
+
+.btn-lg{
+    background: #C0B283;
+    text-shadow: 2px 2px #373737;
+    box-shadow: 2px 2px 5px white;
+}
+
+
+.btn:hover{
+  color:#fff;
+  border:solid #fff 3px;
+}
+a:hover{
+    color: white;
+}
+
+
+
+
+/*BEER Education*/
+
+html,body{
+    margin:0;
+    padding:0;
+    height:100%;
+    width:100%;
+}
+
+.intro{
+    height:100%;
+    width:100%;
+    background: url("../images/beer-education.jpg");
+    margin:auto;
+    display: table;
+    top:0;
+    background-size:cover;
+}
+
+h1{
+    font-family: 'Caveat Brush', cursive;
+    font-size: 700%;
+}   
+
+p,#toptext{
+    text-align:center;
+    font-family: 'Caveat Brush', cursive;
+    font-family: 'Rock Salt', cursive;
+    font-size: 300%;
+    font-style: bold;
+    color: rgb(21, 67, 168);
+    text-shadow: 3px 3px #373737;
+}
+iframe{
+    float: right;
+}
+
+ #youTubeEd{
+    margin-top: 20px;
+  margin-bottom: 20px;
+  float: right;
+
+    
+    
+}
+
+#ted{
+    float: left;
+    margin-top: auto;
+    margin-bottom: 50px;
+}
+
+.carousel-item active{
+    display: table-cell;
+    vertical-align: middle;
+    width: 100%;
+    max-width: none;
+    float:center;
+    align-content: center;
+ 
+
+}
+
+.carousel-inner img {
+    margin: auto;
+  }
+
+.carousel-inner{
+    width:800px;
+    height:500px;
+    align-self: center;
+}
+
+/*beer Edu*/
+
+.beerEdintro{
+        height:100%;
+        width:80%;
+        margin:auto;
+        background: url("../images/beerGlasses.jpg");
+        display: table;
+        top:0;
+        background-size:cover;
+}
+
+h2{
+    font-family: 'Indie Flower', cursive;
+    color:chartreuse;
+    background-color: black
+}
+
+.lead1{
+    background-color: rgb(131, 18, 18);
+    color: azure;
+    background-size: auto;
+    font-family: 'Poiret One', cursive;
+    font-size: large;
+}
+
+.lead2{
+    background-color: rgb(131, 18, 18);
+    color: azure;
+    font-family: 'Poiret One', cursive;
+    font-size: large;
+}
+
+.lead3{
+    background-color: rgb(131, 18, 18);
+    color: azure;
+    font-family: 'Poiret One', cursive;
+    font-size: large;
+
+}
+
+/*resources*/
+
+
+.thinkin{
+    background: url("../images/personthinkin.jpeg");
+    background-color: black;
+    float: center;
+
+
+}
+
+.learnbrew{
+    background: url("../images/learningtobrew1.jpg");
+    background-color: black;
+}
