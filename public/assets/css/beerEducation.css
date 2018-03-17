@@ -113,6 +113,10 @@ iframe{
 
 }
 
+.carousel-inner img {
+    margin: auto;
+  }
+
 .carousel-inner{
     width:800px;
     height:500px;
@@ -134,6 +138,7 @@ iframe{
 h2{
     font-family: 'Indie Flower', cursive;
     color:chartreuse;
+    background-color: black
 }
 
 .lead1{
@@ -157,4 +162,20 @@ h2{
     font-family: 'Poiret One', cursive;
     font-size: large;
 
+}
+
+/*resources*/
+
+
+.thinkin{
+    background: url("../images/personthinkin.jpeg");
+    background-color: black;
+    float: center;
+
+
+}
+
+.learnbrew{
+    background: url("../images/learningtobrew1.jpg");
+    background-color: black;
 }
