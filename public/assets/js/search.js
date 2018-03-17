@@ -110,25 +110,104 @@ $('#ratingSubmitButton').on("click", function(event){
        };
        
     $.get('/api/posts').then(function(commentData){
-         console.log(commentData);
-         console.log(commentData.Brewery);
+         
          for (var i = 0; i < commentData.length; i++){
-          console.log(commentData)
-          var commentSection = $('<div>');
-          commentSection.addClass('col-md-3 commentSectionClass hoverable');
-          var userCommentName = $('<p>');
-          var userCommentBeer = $('<p>');
-          var userCommentBrewery = $('<p>');
+           // loop through returned data from database and create cards of user comments
+           // commentSection div is div that will append to div already in html
+           // div row id that will be added to is #userComments
+
+           //this goes inside row
+           var divWithColSizes = $('<div>');
+           divWithColSizes.addClass('col-xs-12 col-sm-6 col-md-4');
+
+           //this goes inside colsizes class div
+           var divWithImageFlip = $('<div>');
+           divWithImageFlip.addClass('image-flip');
+           divWithImageFlip.attr("ontouchstart", "this.classList.toggle('hover');")
+           
+           // this goes inside image flip
+           var divWithMainFlip = $('<div>');
+           divWithMainFlip.addClass('mainflip');
+                     
+           
+           //this goes inside mainflip
+           var divWithFrontSide = $('<div>');
+           divWithFrontSide.addClass('frontside');
+
+           var divWithBackSide = $('<div>');
+           divWithBackSide.addClass('backside');
+           
+           
+           //this goes inside class frontside
+          var divInsideFrontsideCard = $('<div>');
+          divInsideFrontsideCard.addClass('card');
+          
+
+          var divInsideBacksideCard = $('<div>');
+          divInsideBacksideCard.addClass('card');
+          divWithColSizes.append(divWithImageFlip);
+          divWithImageFlip.append(divWithMainFlip); 
+          divWithMainFlip.append(divWithFrontSide);
+          divWithMainFlip.append(divWithBackSide);
+          divWithFrontSide.append(divInsideFrontsideCard);
+          divWithBackSide.append(divInsideBacksideCard);
+
+          //creating the front and back of the card divs
+          var frontOfCard = $('<div>');
+          var backOfCard = $('<div>');
+          frontOfCard.addClass("card-body text-center");
+          backOfCard.addClass("card-body text-center mt-4");
+          divInsideFrontsideCard.append(frontOfCard);
+          divInsideBacksideCard.append(backOfCard);
+
+          //user Name to go on front of Card
+          var userCommentName = $('<h4>');
+          userCommentName.addClass('card-title');
+          userCommentName.append(commentData[i].UserName);
+          frontOfCard.append(userCommentName);
+          
+
+          //user rating to go on front of Card
           var userCommentStars = $('<p>');
-          var userCommentComment = $('<p>');
-          userCommentName.append("Name: " + commentData[i].UserName);
-          userCommentBeer.append("Beer rated: " + commentData[i].Beer);
-          userCommentBrewery.append("Brewery rated: " + commentData[i].Brewery);
+          userCommentStars.addClass('card-text');
           userCommentStars.append("Rating: " + commentData[i].Stars);
+          frontOfCard.append(userCommentStars);
+          
+          
+          // append name and stars to header
+          // commentSectionHeader.prepend(userCommentName);
+          // commentSectionHeader.append(userCommentStars);
+
+          // Body of the card
+          // var commentSectionBody = $('<div>');
+          // commentSectionBody.addClass('card-body text-center');
+          // divInsideFrontsideCard.append(commentSectionBody);
+
+          var userCommentBeer = $('<p>');
+          userCommentBeer.addClass('card-text');
+          userCommentBeer.append("Beer rated: " + commentData[i].Beer);
+          backOfCard.append(userCommentBeer);
+          
+          var userCommentBrewery = $('<p>');
+          userCommentBrewery.addClass('card-text');
+          userCommentBrewery.append("Brewery rated: " + commentData[i].Brewery);
+          backOfCard.append(userCommentBrewery);
+          
+          
+          var userCommentComment = $('<p>');
+          userCommentComment.addClass('card-text');
           userCommentComment.append("Comments: " + commentData[i].Comment);
-          commentSection.append(userCommentName, userCommentBeer, userCommentBrewery, userCommentStars, userCommentComment);
-          var userComments = $('#userComments');
-          userComments.prepend(commentSection);
+          backOfCard.append(userCommentComment);
+          
+          $('#commentSection').prepend(divWithColSizes);
+          //append Beer Brewery and Comment to Body
+          // commentSectionBody.append(userCommentBrewery, userCommentBeer, userCommentComment);
+          
+          //divInsideFrontsideCard.append(userCommentName, userCommentBeer, userCommentBrewery, userCommentStars, userCommentComment);
+          // var userComments = $('#userComments');
+          // userComments.prepend(divInsideFrontsideCard);
+          // $('.frontside').append(divInsideFrontsideCard);
+          // $('.backside').append(divInsideBacksideCard);
          }
          
            
