@@ -46,7 +46,7 @@
         <div class = "container">
             <!-- 1st row top of page will welcome user when user logs on - full screen-->
             <div class = "row"> <!-- row covers a col-12 full screen -->
-                <div class = "col-md-12" id ="welcomeUser">
+                <div class = "col-md-12 center-align" id ="welcomeUser">
                 </div>
             </div> <!-- end of welcome user row -->
             <!-- row with search bar and button in 1st col and instructions to rate in col 2 -->
@@ -64,7 +64,7 @@
                 </div> <!-- end of 3rd col -->
             </div> <!--end of h2 row -->
             <!--3rd row includes map and ratings area  -->
-            <div class = "row marginBetween"> <!--contains 2 col map and leave review-->
+            <div class = "row marginBetween" id = "marginBottom"> <!--contains 2 col map and leave review-->
                 <!-- map area -->
                 <div class = "col-md-5 marginBetween">
                     <input id="pac-input" class="controls" type="text" placeholder="Search Box" value="brewery">
@@ -76,9 +76,10 @@
                 <div class = "col-md-5 ratings hoverable marginBetween">
                     <!-- Name -->
                     <form action="" id = "ratingsForm">
+                        <!-- Put rating Name back in  -->
                         <div class="md-form">
-                            <i class="fa fa-user prefix goldColor"></i>
-                            <input type="text" id="ratingName" class="form-control" placeholder="Your Name">
+                            <i class="fas fa-beer prefix goldColor"></i>
+                            <input type="text" id="ratingName" class="form-control" placeholder= "Your Name">
                             <label for="ratingName"></label>
                         </div>
                         <!-- Beer -->
@@ -108,10 +109,68 @@
                     </form> <!--end of leave review form-->
                 </div> <!-- end of leave review div col -->
             </div> <!-- map and review .row -->   
+
+            <!-- Search for information Based from city search -->
+            <div class="row marginBetween">
+              <div class="col-md-5 marginBetween marginSpace">
+                <h3>Look for Brewery Information</h3>
+                <br>
+                <input type="text" id="brewerySearchInfo">
+                <button class = "btn btn-lg input-group-btn" id = "breweryMappingBtn" placeholder="Search For More Information">Search</button>
+              </div>
+
+              <div class="col-md-2 marginBetween">
+                <!-- bank space -->
+              </div>
+
+              <div class="col-md-5 marginBetween marginSpace">
+                <div class="panel panel-default" id="beerInfoPanel">
+                <div class="panel-heading">
+                  <h3 class="panel-title">Searched Brewery Ratings</h3>
+                </div>
+                <div class="panel-body" id="returnedBreweryInfoBtn">
+
+                </div>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- modal to dsplay the button info -->
+
+            <!-- Modal -->
+            <div class="modal fade" id="breweryInfo" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    TEST
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div> <!--END OF MODAL-->
+
         </div> <!-- .container> -->
     </main>
+    <section>
+        <div class = "container">
+            <div class = "row" id = "userComments">
+
+            </div>
+
+        </div>
+    </section>
     
 <script src="assets/js/search.js"></script>
+<script src="assets/js/beers.js"></script>
 <script src="assets/js/landingpage.js"></script>
 
 <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>

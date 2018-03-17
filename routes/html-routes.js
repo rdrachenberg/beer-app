@@ -26,21 +26,6 @@ module.exports = function(app) {
 
   // results route loads results.html
   app.get("/results", function(req, res) {
-    // res.sendFile(path.join(__dirname, "../public/results.html"));
-    res.render("index");
+    res.sendFile(path.join(__dirname, "../public/results.html"));
   });
-
-  // blog route loads blog.html
-  app.get("/blog", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/blog.html"));
-  });
-  // login route loads blog.html
-  app.get("/login", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/login.html"));
-  });
-  // signup route loads blog.html
-  app.get("/signup", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/signup.html"));
-  });
-
 };
