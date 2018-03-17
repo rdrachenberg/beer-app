@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title><Beer Aficionado></title>
+    <title><h1>Beer Aficionado</h1></title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -50,12 +50,15 @@
               
       <main >
         <div class = "getStartedDiv">
+          <img src= "assets/images/beer-in-bucket.jpg" style="height:100%; width:100%; margin:auto; opacity: 0.5;">
+          <div class="getStartedText">
               <h1 >Share your Beer Experience</h1>
              
               <h3>Don't waste your time with bad beer. We connect you with craft beer enthusiasts and let you rate your experience</h3>
             
        
           <button type = "button" class = "btn btn-lg hoverable" data-toggle="modal" data-target="#signUpModal"><i class="fas fa-lock"></i>  Sign Up</button>
+        </div>
         </div>
   
   <!-- Sign Up Modal -->
@@ -69,40 +72,41 @@
         </div>
         <div class="modal-body">
           <!-- Material form register -->
-<form id = "signUpForm">
+<form data-toggle="validator" role="form">
     <p class="h4 text-center mb-4">Sign up</p>
 
     <!-- Material input text -->
-    <div class="md-form">
+    <div class="form-group md-form">
         <i class="fa fa-user prefix grey-text"></i>
-        <input type="text" id="formName" class="form-control" placeholder="Your Name" autocomplete="name">
-        <label for="formName"></label>
+        <input type="text" id="materialFormRegisterNameEx" class="form-control" placeholder="Name" required>
+        <label for="materialFormRegisterNameEx"></label>
     </div>
 
     <!-- Material input email -->
-    <div class="md-form">
+    <div class="form-group md-form">
         <i class="fa fa-envelope prefix grey-text"></i>
-        <input type="email" id="formEmail" class="form-control" placeholder="Your Email" autocomplete="email">
-        <label for="formEmail"></label>
-    </div>
-
-    <!-- Material input email -->
-    <div class="md-form">
-        <i class="fa fa-exclamation-triangle prefix grey-text"></i>
-        <input type="email" id="formConfirmEmail" class="form-control" placeholder="Confirm Your Email" autocomplete="confirm">
-        <label for="formConfirmEmail"></label>
+        <input type="email" id="materialFormRegisterEmailEx" class="form-control" placeholder="Email" required>
+        <label for="materialFormRegisterEmailEx"></label>
     </div>
 
     <!-- Material input password -->
-    <div class="md-form">
+    <div class="form-group md-form">
+        <i class="fa fa-exclamation-triangle prefix grey-text"></i>
+        <input type="password" id="materialFormRegisterPasswordEx" class="form-control" placeholder="Password" required>
+        <label for="materialFormRegisterPasswordEx"></label>
+    </div>
+
+    <!-- Material input confirmation password -->
+    <div class="form-group md-form">
         <i class="fa fa-lock prefix grey-text"></i>
-        <input type="password" id="formPassword" class="form-control" placeholder="Your Password" autocomplete="password">
-        <label for="formPassword"></label>
+        <input type="password" id="materialFormRegisterConfirmEx" class="form-control" placeholder="Confirm Password" data-match="#materialFormRegisterPasswordEx" data-match-error="Sorry passwords do not match please try again" required>
+        <label for="materialFormRegisterConfirmEx"></label>
     </div>
 
     <div class="text-center mt-4">
         <button class="btn btn-primary" type="submit" id = "registerButton" data-dismiss = "modal">Register</button>
     </div>
+    
 </form>
 <!-- Material form register -->
         </div>
