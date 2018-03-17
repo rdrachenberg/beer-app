@@ -2,8 +2,8 @@
 .getStartedText{
     width: 50%;
     height: 50%;
-    color: rgb(246, 250, 26);
-    text-shadow: 4px 4px #0d6669;
+    color: #C0B283;
+    text-shadow: 2px 2px #fff;
 
     position: absolute;
     top:40%;
@@ -17,6 +17,10 @@
 
   body{
     font-family: "brandon-grotesque",sans-serif;
+    background: url("../images/landingPageImage.jpg");
+    background-repeat: no-repeat;
+    background-size: cover; 
+    font-family: 'Berkshire Swash', cursive;
 }
 .getStartedDiv {
     height:100%;
