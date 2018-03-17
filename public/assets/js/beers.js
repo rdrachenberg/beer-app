@@ -38,7 +38,7 @@ $("#breweryMappingBtn").on("click", function(event) {
           	// Find More information about this brewery
           	console.log("REVIEWLINK:" + response[i].reviewlink);
           
-          	var btn = "<center><button type='button' class='btn' data-number=" + i + " data-toggle='modal' data-target='#breweryInfo' name='"  + response[i].name + "' id=button" + i + ">" + "<h4>" + response[i].name + "</h4>" + "\n" + "</button></center>";
+          	var btn = "<center><button style=background:#C0B283; type='button' class='btn' data-number=" + i + " data-toggle='modal' data-target='#breweryInfo' name='"  + response[i].name + "' id=button" + i + ">" + "<h4>" + response[i].name + "</h4>" + "\n" + "</button></center>";
           	// $("<button>").attr('margin', '10');
           	$("#returnedBreweryInfoBtn").append(btn);
 
